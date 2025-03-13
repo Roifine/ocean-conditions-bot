@@ -39,14 +39,14 @@ for height in heights:
     time = datetime.strptime(height['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
     if time not in wave_dic: # and i'm using this in my dictionary. 
-        wave_dic[time] = {'size': [], 'direction': [], 'period': []} # for each time unit create a dictionary with the size, direction and period of the wave
-        wave_dic[time]['size'].append(size) # for the size key in the dictioary add the size as a value in a list of values
-        wave_dic[time]['direction'].append(direction)
-        wave_dic[time]['period'].append(period)
+        wave_dic[time] = {}
+        wave_dic[time]['size'] = size # for the size key in the dictioary add the size as a value in a list of values
+        wave_dic[time]['direction'] = direction
+        wave_dic[time]['period'] = period
 
 for time, values in wave_dic.items():
     if time.hour == 8:
-        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'][0], 1)} meters. Swell direction is {round(values['direction'][0])} with {round(values['period'][0])} seconds period")
+        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {round(values['direction'])} with {round(values['period'])} seconds period")
        
 # Now I'm going to print the wind direction and speed for each day at 8 
 #winds = wind['hours']
