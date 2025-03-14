@@ -57,7 +57,7 @@ for wind in winds:
 
 for time, values in wave_dic.items():
     if time.hour == 8:
-        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {round(values['direction'])} with {round(values['period'])} seconds period. Wind is {values['wind_speed']} from {values['wind_direction']} {values['wind_speed']} ")
+        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {round(values['direction'])} with {round(values['period'])} seconds period. Wind is {values['wind_speed']} from {values['wind_direction']} direction")
        
 # Now I'm going to print the wind direction and speed for each day at 8 
 #winds = wind['hours']
