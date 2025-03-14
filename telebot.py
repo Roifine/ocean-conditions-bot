@@ -7,7 +7,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Make sure your bot is created correctly
-bot = Bot(token="8188434850:AAGBYgMPghUzu-cc1vlzFjhmjlzXD7lMcSI")
+bot = 
 
 async def main():
     # Now this function is asynchronous
