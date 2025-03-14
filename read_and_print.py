@@ -15,7 +15,14 @@ def timezone(xtime):
 
     return sydney_time
 
-# openning the wave hights file
+# function to convert speed from meter per second to knots 
+
+def knots(meter: str):
+    speed = 1.943844 * int(meter)
+    return speed
+
+# function to convert degrees to name of swell & wind direction 
+
 
 def degrees(deg: str):
     degree = int(deg)
@@ -72,14 +79,14 @@ for wind in winds:
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
     wave_dic[time]['wind_direction'] = degrees(wind_direction)
-    wave_dic[time]['wind_speed'] = wind_speed 
+    wave_dic[time]['wind_speed'] = knots(wind_speed) 
 
 
 # printing for 8 am next ten days
 
 for time, values in wave_dic.items():
     if time.hour == 8:
-        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {values['wind_speed']} from the {values['wind_direction']}")
+        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed'])} knots from the {values['wind_direction']}")
        
 # Now I'm going to print the wind direction and speed for each day at 8 
 #winds = wind['hours']
