@@ -17,6 +17,28 @@ def timezone(xtime):
 
 # openning the wave hights file
 
+def degrees(deg: str):
+    degree = int(deg)
+    if degree >= 330 or degree <= 30:
+        return f"North ({degree}°)"
+    elif 30 < degree <= 60:
+        return f"North East ({degree}°)"
+    elif 60 < degree <= 120:
+        return f"East({degree}°)"  
+    elif 120 < degree <= 150:
+        return f"South East ({degree}°)"
+    elif 150 < degree <= 210:
+        return f"South ({degree}°)"
+    elif 210 < degree <= 240:
+        return f"South West ({degree})°"
+    elif 240 < degree <= 300:
+        return f"West ({degree})°"
+    elif 300 < degree <= 330:
+        return f"North West ({degree})°"
+    
+    
+
+
 
 with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
     wave_data = wave_file.read()
@@ -38,7 +60,7 @@ for height in heights:
     
     wave_dic[time] = {}
     wave_dic[time]['size'] = size # for the size key in the dictioary add the size as a value in a list of values
-    wave_dic[time]['direction'] = direction
+    wave_dic[time]['direction'] = degrees(direction)
     wave_dic[time]['period'] = period
        
 # loop as the above just for winds json
@@ -49,7 +71,7 @@ for wind in winds:
     wind_speed = wind['windSpeed']['sg']
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
-    wave_dic[time]['wind_direction'] = wind_direction
+    wave_dic[time]['wind_direction'] = degrees(wind_direction)
     wave_dic[time]['wind_speed'] = wind_speed 
 
 
@@ -57,7 +79,7 @@ for wind in winds:
 
 for time, values in wave_dic.items():
     if time.hour == 8:
-        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {round(values['direction'])} with {round(values['period'])} seconds period. Wind is {values['wind_speed']} from {values['wind_direction']} direction")
+        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {values['wind_speed']} from the {values['wind_direction']}")
        
 # Now I'm going to print the wind direction and speed for each day at 8 
 #winds = wind['hours']
