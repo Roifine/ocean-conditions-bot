@@ -56,6 +56,10 @@ wind = json.loads(wind_data) # the whole json file content for wind hight
 
 # the following loop takes the wave hight, direction, and period for Bondi and prints them for every day in the next 10 days at 8 am 
 
+# This would be the user input code
+
+hello = input("Hi! Press 1 to recieve free 10 day surf forecast")
+
 heights = surf['hours']
 wave_dic = {}
 for height in heights:
