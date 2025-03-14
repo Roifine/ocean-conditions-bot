@@ -58,7 +58,13 @@ wind = json.loads(wind_data) # the whole json file content for wind hight
 
 # This would be the user input code
 
-hello = input("Hi! Press 1 to recieve free 10 day surf forecast")
+#while True:
+#    hello = input("Welcome to your surf app! Type 1 for 10 day forecast")
+#    if hello == "1":
+#        break
+#    else:
+#        continue
+    
 
 heights = surf['hours']
 wave_dic = {}
@@ -97,7 +103,24 @@ for time, values in wave_dic.items():
 #for wind in winds['hours']:
 
 
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
+TOKEN = "8188434850:AAGBYgMPghUzu-cc1vlzFjhmjlzXD7lMcSI"
+
+def start(update: Update, context: CallbackContext):
+    update.message.reply_text("🌊 Welcome to Surf Report Bot! Type /report to get surf conditions.")
+
+def report(update: Update, context: CallbackContext):
+    surf_data = "🌊 Surf Report 🌊\n- Best time: 8 AM & 5 PM\n- Wave height: 1.5m\n- Wind: Light offshore"
+    update.message.reply_text(surf_data)
+
+updater = Updater(TOKEN, use_context=True)
+updater.dispatcher.add_handler(CommandHandler("start", start))
+updater.dispatcher.add_handler(CommandHandler("report", report))
+
+updater.start_polling()
+updater.idle()
 
 
 
