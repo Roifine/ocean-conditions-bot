@@ -1,0 +1,25 @@
+name: Run Python Script
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.7'
+          
+      - name: Run Script 1 with STORM API
+        env:
+          API_KEY: ${{ secrets.STORM.API }}
+        run: python fetch_data.py
+
+      - name: Run Script 2 with TELEGRAM API
+        env:
+          API_KEY: ${{ secrets.TELEGRAM.API }}
+        run: python bot.py

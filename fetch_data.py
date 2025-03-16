@@ -10,6 +10,7 @@ if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env o
 
 storm_api = os.getenv("storm_api")  # Now, API_KEY contains "your_secret_key_here"
 
+
 # fetching the WAVES data
 response = requests.get(
   'https://api.stormglass.io/v2/weather/point',
@@ -20,6 +21,7 @@ response = requests.get(
     'source': 'sg'
   },
   headers={
+
     'Authorization': storm_api
   }
 )
@@ -46,7 +48,9 @@ response = requests.get(
     'source': 'sg'
   },
   headers={
+
     'Authorization': storm_api
+
   }
 )
 ###
