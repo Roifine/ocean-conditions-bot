@@ -4,10 +4,6 @@ from datetime import datetime # handle time objects
 import pytz # handle time zone conversion
 import json # handles reading and writting json files
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ccd4440d06237cafacef98351d9c18f896f6c1d
 # Function Handling time from UTC to Sydney time
 def timezone(xtime):
 
@@ -102,41 +98,9 @@ for time, values in wave_dic.items():
     if time.hour == 8:
         print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed'])} knots from the {values['wind_direction']}")
        
-<<<<<<< HEAD
-# 
-=======
-# Now I'm going to print the wind direction and speed for each day at 8 
-#winds = wind['hours']
-#for wind in winds['hours']:
-
-
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext
-
-TOKEN = "8188434850:AAGBYgMPghUzu-cc1vlzFjhmjlzXD7lMcSI"
-
-def start(update: Update, context: CallbackContext):
-    update.message.reply_text("🌊 Welcome to Surf Report Bot! Type /report to get surf conditions.")
-
-def report(update: Update, context: CallbackContext):
-    surf_data = "🌊 Surf Report 🌊\n- Best time: 8 AM & 5 PM\n- Wave height: 1.5m\n- Wind: Light offshore"
-    update.message.reply_text(surf_data)
-
-updater = Updater(TOKEN, use_context=True)
-updater.dispatcher.add_handler(CommandHandler("start", start))
-updater.dispatcher.add_handler(CommandHandler("report", report))
-
-updater.start_polling()
-updater.idle()
->>>>>>> 4ccd4440d06237cafacef98351d9c18f896f6c1d
 
 
 
 
-<<<<<<< HEAD
-=======
-# later I'd like to combine the wind and wave hight into one message
 
-
->>>>>>> 4ccd4440d06237cafacef98351d9c18f896f6c1d
 
