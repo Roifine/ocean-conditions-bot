@@ -1,9 +1,14 @@
 # this is the file to test how to fetch the data from storm glass API
 import json
 import requests
-###
 
+import os # to load the api keys from my env file
+from dotenv import load_dotenv # to load the api keys from my env file
 
+if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
+    load_dotenv("api_keys.env")
+
+storm_api = os.getenv("storm_api")  # Now, API_KEY contains "your_secret_key_here"
 
 # fetching the WAVES data
 response = requests.get(
@@ -15,13 +20,12 @@ response = requests.get(
     'source': 'sg'
   },
   headers={
-    'Authorization': '7b69f340-fcad-11ef-b19c-0242ac130003-7b69f426-fcad-11ef-b19c-0242ac130003'
+    'Authorization': storm_api
   }
 )
 ###
 # Do something with response data.
 wave_data = response.json()
-
 
 
 with open("wave_forecast.json", "w") as my_file:
@@ -42,7 +46,7 @@ response = requests.get(
     'source': 'sg'
   },
   headers={
-    'Authorization': '7b69f340-fcad-11ef-b19c-0242ac130003-7b69f426-fcad-11ef-b19c-0242ac130003'
+    'Authorization': storm_api
   }
 )
 ###
