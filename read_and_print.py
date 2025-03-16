@@ -96,7 +96,13 @@ for wind in winds:
 
 for time, values in wave_dic.items():
     if time.hour == 8:
-        print(f"{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed'])} knots from the {values['wind_direction']}")
+        print(f"""
+        🌊 Surf Report for {time.strftime("%A")}:
+        - 🏄 Wave Height: {round(values['size'], 1)}m
+        - 💨 Wind: {round(values['wind_speed'])} km/h from {values['wind_direction']}
+        """)
+        
+# 🌊{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed'])} knots from the {values['wind_direction']}")
        
 
 
