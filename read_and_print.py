@@ -42,8 +42,14 @@ def degrees(degree: float):
     elif 300 < degree <= 330:
         return f"North West ({degree})°"
     
-    
-#def relative_wind_direction(wind_direction :int)
+# this function would return the effective wind direction for the beach
+def relative_wind_direction(wind_direction :float, beach_facing_degree: int):
+    if beach_facing_degree - 60 < wind_direction < beach_facing_degree + 60:
+        return f"Ons-hore"
+    elif beach_facing_degree - 95 < wind_direction  < beach_facing_degree -60 or beach_facing_degree + 60 < wind_direction  < beach_facing_degree + 175:
+        return f"Cross-shore"
+    elif beach_facing_degree - 160 < wind_direction < beach_facing_degree - 95 or beach_facing_degree + 175 < wind_direction  < beach_facing_degree + 200:
+        return f"Off-shore"
 
 
 with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
@@ -53,17 +59,8 @@ with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind
 surf = json.loads(wave_data) # the whole json file content for wave hight
 wind = json.loads(wind_data) # the whole json file content for wind hight
 
-# the following loop takes the wave hight, direction, and period for Bondi and prints them for every day in the next 10 days at 8 am 
 
-# This would be the user input code
-
-#while True:
-#    hello = input("Welcome to your surf app! Type 1 for 10 day forecast")
-#    if hello == "1":
-#        break
-#    else:
-#        continue
-    
+beach_facing_degree = 160 #hard coding to Bondi, this is used in the wind and wave size functions as an input
 
 heights = surf['hours']
 wave_dic = {}
@@ -87,7 +84,7 @@ for wind in winds:
     wind_speed_meters_ph = float(wind['windSpeed']['sg'])
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
-    wave_dic[time]['wind_direction'] = degrees(wind_direction)
+    wave_dic[time]['wind_direction'] = relative_wind_direction(wind_direction, beach_facing_degree)
     wave_dic[time]['wind_speed_knots_ph'] = knots(wind_speed_meters_ph) 
 
 
@@ -97,11 +94,10 @@ for time, values in wave_dic.items():
     if time.hour == 8:
         print(f"""
         🌊 Surf Report for {time.strftime("%A")}:
-        - 🏄 Wave Height: {round(values['size'], 1)}m
-        - 💨 Wind: {round(values['wind_speed_knots_ph'])} knots from {values['wind_direction']}
+        🏄 Wave Height: {round(values['size'], 1)}m
+        💨 Wind: {round(values['wind_speed_knots_ph'])} knots from {values['wind_direction']}
         """)
         
-# 🌊{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed_knots_ph'])} knots from the {values['wind_direction']}")
        
 
 
