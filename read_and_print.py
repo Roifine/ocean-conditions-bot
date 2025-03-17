@@ -15,11 +15,16 @@ def timezone(xtime):
 
     return sydney_time
 
-# function to convert speed from meter per second to knots 
+# function to convert speed from meter per second to kilometer per hour 
 
-def knots(meter: str):
-    speed = 1.943844 * int(meter)
-    return speed
+def wind_strength(meter: str):
+    wind_speed_km_ph = 3.6 * int(meter)
+    if wind_speed_km_ph < 10:
+        return "Light"
+    elif 10 <= wind_speed_km_ph < 20:
+        return "Modereate"
+    elif 20 <= wind_speed_km_ph:
+        return "Strong"
 
 # function to convert degrees to name of swell & wind direction 
 
@@ -44,12 +49,14 @@ def degrees(degree: float):
     
 # this function would return the effective wind direction for the beach
 def relative_wind_direction(wind_direction :float, beach_facing_degree: int):
-    if beach_facing_degree - 60 < wind_direction < beach_facing_degree + 60:
-        return f"Ons-hore"
-    elif beach_facing_degree - 95 < wind_direction  < beach_facing_degree -60 or beach_facing_degree + 60 < wind_direction  < beach_facing_degree + 175:
-        return f"Cross-shore"
+    if beach_facing_degree - 45 < wind_direction < beach_facing_degree + 45:
+        return f"on-shore"
+    elif beach_facing_degree - 95 < wind_direction  < beach_facing_degree - 45 or beach_facing_degree + 45 < wind_direction  < beach_facing_degree + 175:
+        return f"cross-shore"
     elif beach_facing_degree - 160 < wind_direction < beach_facing_degree - 95 or beach_facing_degree + 175 < wind_direction  < beach_facing_degree + 200:
-        return f"Off-shore"
+        return f"off-shore"
+    
+# this function would return the descroption of the wind strength
 
 
 with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
@@ -81,11 +88,11 @@ for height in heights:
 winds = wind['hours']
 for wind in winds:
     wind_direction = float(wind['windDirection']['sg'])
-    wind_speed_meters_ph = float(wind['windSpeed']['sg'])
+    wind_speed_meters_ps = float(wind['windSpeed']['sg'])
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
     wave_dic[time]['wind_direction'] = relative_wind_direction(wind_direction, beach_facing_degree)
-    wave_dic[time]['wind_speed_knots_ph'] = knots(wind_speed_meters_ph) 
+    wave_dic[time]['wind_speed_km_ph'] = wind_strength(wind_speed_meters_ps) 
 
 
 # printing for 8 am next ten days
@@ -93,9 +100,9 @@ for wind in winds:
 for time, values in wave_dic.items():
     if time.hour == 8:
         print(f"""
-        🌊 Surf Report for {time.strftime("%A")}:
-        🏄 Wave Height: {round(values['size'], 1)}m
-        💨 Wind: {round(values['wind_speed_knots_ph'])} knots from {values['wind_direction']}
+        🌊 {time.strftime("%A")}
+        🏄 {round(values['size'], 1)} meters
+        💨 {values['wind_speed_km_ph']} {values['wind_direction']} wind
         """)
         
        
