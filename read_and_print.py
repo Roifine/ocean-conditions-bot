@@ -85,11 +85,11 @@ for height in heights:
 winds = wind['hours']
 for wind in winds:
     wind_direction = wind['windDirection']['sg']
-    wind_speed = wind['windSpeed']['sg']
+    wind_speed_meters_ph = wind['windSpeed']['sg']
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
     wave_dic[time]['wind_direction'] = degrees(wind_direction)
-    wave_dic[time]['wind_speed'] = knots(wind_speed) 
+    wave_dic[time]['wind_speed_knots_ph'] = knots(wind_speed_meters_ph) 
 
 
 # printing for 8 am next ten days
@@ -99,10 +99,10 @@ for time, values in wave_dic.items():
         print(f"""
         🌊 Surf Report for {time.strftime("%A")}:
         - 🏄 Wave Height: {round(values['size'], 1)}m
-        - 💨 Wind: {round(values['wind_speed'])} km/h from {values['wind_direction']}
+        - 💨 Wind: {round(values['wind_speed_knots_ph'])} knots from {values['wind_direction']}
         """)
         
-# 🌊{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed'])} knots from the {values['wind_direction']}")
+# 🌊{time.strftime("%A")} {time.hour}:00 - {round(values['size'], 1)} meters. Swell direction is {values['direction']} with {round(values['period'])} seconds period. Wind is {round(values['wind_speed_knots_ph'])} knots from the {values['wind_direction']}")
        
 
 
