@@ -24,8 +24,7 @@ def knots(meter: str):
 # function to convert degrees to name of swell & wind direction 
 
 
-def degrees(deg: str):
-    degree = int(deg)
+def degrees(degree: float):
     if degree >= 330 or degree <= 30:
         return f"North ({degree}°)"
     elif 30 < degree <= 60:
@@ -44,7 +43,7 @@ def degrees(deg: str):
         return f"North West ({degree})°"
     
     
-
+#def relative_wind_direction(wind_direction :int)
 
 
 with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
@@ -84,8 +83,8 @@ for height in heights:
 
 winds = wind['hours']
 for wind in winds:
-    wind_direction = wind['windDirection']['sg']
-    wind_speed_meters_ph = wind['windSpeed']['sg']
+    wind_direction = float(wind['windDirection']['sg'])
+    wind_speed_meters_ph = float(wind['windSpeed']['sg'])
     time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
 
     wave_dic[time]['wind_direction'] = degrees(wind_direction)
