@@ -1,6 +1,6 @@
 # this program reads the swell hight stores it and prints it
 
-from datetime import datetime # handle time objects
+from datetime import datetime, timedelta # handle time objects
 import pytz # handle time zone conversion
 import json # handles reading and writting json files
 
@@ -96,6 +96,12 @@ for wind in winds:
 
 
 # printing for 8 am next ten days
+today = datetime.today()
+end_day = today + timedelta(days=4)
+
+formatted_range = f"{today.day}-{end_day.day}.{today.month}"
+print(f"Bondi Surf Forecast {formatted_range}")
+
 count = 0
 for time, values in wave_dic.items():
     if time.hour == 8:
