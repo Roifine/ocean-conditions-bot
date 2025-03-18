@@ -49,12 +49,12 @@ def degrees(degree: float):
     
 # this function would return the effective wind direction for the beach
 def relative_wind_direction(wind_direction :float, beach_facing_degree: int):
-    if beach_facing_degree - 45 < wind_direction < beach_facing_degree + 45:
+    if 75 < wind_direction < 155:
         return f"on-shore"
-    elif beach_facing_degree - 95 < wind_direction  < beach_facing_degree - 45 or beach_facing_degree + 45 < wind_direction  < beach_facing_degree + 175:
-        return f"cross-shore"
-    elif beach_facing_degree - 160 < wind_direction < beach_facing_degree - 95 or beach_facing_degree + 175 < wind_direction  < beach_facing_degree + 200:
+    elif 190 < wind_direction < 270 or 310 < wind_direction < 350:
         return f"off-shore"
+    else:
+        return f"cross-shore"
     
 # this function would return the descroption of the wind strength
 
@@ -67,7 +67,7 @@ surf = json.loads(wave_data) # the whole json file content for wave hight
 wind = json.loads(wind_data) # the whole json file content for wind hight
 
 
-beach_facing_degree = 160 #hard coding to Bondi, this is used in the wind and wave size functions as an input
+beach_facing_degree = 115 #hard coding to Bondi, this is used in the wind and wave size functions as an input
 
 heights = surf['hours']
 wave_dic = {}
@@ -96,7 +96,7 @@ for wind in winds:
 
 
 # printing for 8 am next ten days
-
+count = 0
 for time, values in wave_dic.items():
     if time.hour == 8:
         print(f"""
@@ -104,6 +104,9 @@ for time, values in wave_dic.items():
         🏄 {round(values['size'], 1)} meters
         💨 {values['wind_speed_km_ph']} {values['wind_direction']} wind
         """)
+        count += 1
+        if count == 5:
+            break
         
        
 
