@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta # handle time objects
 import pytz # handle time zone conversion
 import json # handles reading and writting json files
+import math
 
 # Function Handling time from UTC to Sydney time
 def timezone(xtime):
@@ -15,14 +16,14 @@ def timezone(xtime):
 
     return sydney_time
 
-# function to convert speed from meter per second to kilometer per hour 
+# function to convert speed from meter per second to kilometer per hour and also defines the strength of the wind
 
-def wind_strength(meter: str):
-    wind_speed_km_ph = 3.6 * int(meter)
+def wind_strength(wind_speed_meters_ps: float):
+    wind_speed_km_ph = 3.6 * wind_speed_meters_ps
     if wind_speed_km_ph < 10:
         return "Light"
     elif 10 <= wind_speed_km_ph < 20:
-        return "Modereate"
+        return "Moderate"
     elif 20 <= wind_speed_km_ph:
         return "Strong"
 
@@ -48,16 +49,26 @@ def degrees(degree: float):
         return f"North West ({degree})°"
     
 # this function would return the effective wind direction for the beach
-def relative_wind_direction(wind_direction :float, beach_facing_degree: int):
+def effective_wind_direction(wind_direction :float, beach_facing_degree: int):
     if 75 < wind_direction < 155:
         return f"on-shore"
     elif 190 < wind_direction < 270 or 310 < wind_direction < 350:
         return f"off-shore"
     else:
         return f"cross-shore"
-    
-# this function would return the descroption of the wind strength
 
+def effective_wave_size(size_meter: float, direction: float, period: float):
+    size_feet = size_meter / 0.305
+    if not 110 < direction < 190:
+        size_feet *= 0.6
+    if 11 >= period > 8:
+        size_feet *= 1.1
+    elif period > 11:
+        size_feet *= 1.3
+    low = math.floor(size_feet)
+    high = math.ceil(size_feet)
+    return f"{low}-{high}"
+      
 
 with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
     wave_data = wave_file.read()
@@ -72,16 +83,17 @@ beach_facing_degree = 115 #hard coding to Bondi, this is used in the wind and wa
 heights = surf['hours']
 wave_dic = {}
 for height in heights:
-    size = height['swellHeight']['sg']
-    direction = height['swellDirection']['sg']
-    period = height['swellPeriod']['sg']
-    time = datetime.strptime(height['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
+    size_meter = float(height['swellHeight']['sg'])
+    direction = float(height['swellDirection']['sg'])
+    period = float(height['swellPeriod']['sg'])
+    time = timezone(datetime.strptime(height['time'], "%Y-%m-%dT%H:%M:%S%z")) # convert the time into datetime object
 
     
     wave_dic[time] = {}
-    wave_dic[time]['size'] = size # for the size key in the dictioary add the size as a value in a list of values
+    wave_dic[time]['size'] = effective_wave_size(size_meter, direction, period) # for the size key in the dictioary add the size as a value in a list of values
     wave_dic[time]['direction'] = degrees(direction)
     wave_dic[time]['period'] = period
+
        
 # loop as the above just for winds json
 
@@ -89,9 +101,9 @@ winds = wind['hours']
 for wind in winds:
     wind_direction = float(wind['windDirection']['sg'])
     wind_speed_meters_ps = float(wind['windSpeed']['sg'])
-    time = datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z") # convert the time into datetime object
+    time = timezone(datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z")) # convert the time into datetime object
 
-    wave_dic[time]['wind_direction'] = relative_wind_direction(wind_direction, beach_facing_degree)
+    wave_dic[time]['wind_direction'] = effective_wind_direction(wind_direction, beach_facing_degree)
     wave_dic[time]['wind_speed_km_ph'] = wind_strength(wind_speed_meters_ps) 
 
 
@@ -103,13 +115,14 @@ formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"Bondi Surf Forecast {formatted_range}")
 
 count = 0
+
 for time, values in wave_dic.items():
     if time.hour == 8:
         print(f"""
         🌊 {time.strftime("%A")}
-        🏄 {round(values['size'], 1)} meters
+        🏄 {values['size']} ft
         💨 {values['wind_speed_km_ph']} {values['wind_direction']} wind
-        """)
+       """)
         count += 1
         if count == 5:
             break
