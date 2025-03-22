@@ -34,7 +34,7 @@ class MyBot:
     
     async def start(self, update: Update, context: CallbackContext):
         print("Received /start command")
-        await update.message.reply_text("Hello, I'm your bot!")
+        await update.message.reply_text("Hello, I'm your bot! Type /surf for forecast")
         print("Reply sent")
 
     async def surf_report(self, update: Update, context: CallbackContext):

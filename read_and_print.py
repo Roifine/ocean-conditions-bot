@@ -148,7 +148,6 @@ for wind in winds:
 
 
 # with the tides info, i'm gonna create a dictionry, indide it would be a list of dictionaries
-tides_list = []
 tide_calander = {}
 extremes = tide_extreme['data']
 for tide_extreme in extremes:
