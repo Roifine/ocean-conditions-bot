@@ -55,7 +55,7 @@ class MyBot:
         print(f"{user.name} wrote: {msg.text}")  # Print user and their message
 
         # Send a reply to the user (for example, after receiving their message)
-        await self.send_text(user.id, "Thanks for your message!")
+        await self.send_text(user.id, f"Thanks for your message {user.name}!")
     
     async def send_text(self, chat_id: int, text: str):
         """Send a message to a specific user."""

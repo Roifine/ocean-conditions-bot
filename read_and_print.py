@@ -70,15 +70,52 @@ def effective_wave_size(size_meter: float, direction: float, period: float, beac
     low = math.floor(size_feet)
     high = math.ceil(size_feet)
     return f"{low}-{high}"
+
+
+def find_closest_tides(tide_calander, target_time="8:00", days_ahead=5):
+    # Convert target_time from string to datetime.time object
+    reference_time = datetime.strptime(target_time, "%H:%M").time()
+    # Dictionary to store results
+    tide_summary = {}
+    # Get today's date
+    today = datetime.now().date()
+    # Loop through the next `days_ahead` days
+    for day_offset in range(days_ahead):
+        target_date = today + timedelta(days=day_offset)
+
+        # Get all tide data for the target date
+        tides_for_day = tide_calander.get(target_date, [])
+
+        # Variables to track the closest tides before and after target_time
+        closest_before = None
+        closest_after = None
+
+        for tide in tides_for_day:
+            tide_time = tide['tide_time'].time()  # Extract time only
+
+            if tide_time < reference_time:
+                closest_before = tide  # Update latest before target_time
+            elif tide_time > reference_time and closest_after is None:
+                closest_after = tide  # Set first after target_time
+
+        # Store the results for the day
+        tide_summary[target_date] = {
+            'before': closest_before,
+            'after': closest_after
+        }
+    return tide_summary
       
 
-with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file :
+with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file, open("tide_hourly_data.json") as tide_hourly_file, open("tide_extreme_data.json") as tide_extreme_file :
     wave_data = wave_file.read()
     wind_data = wind_file.read()
+    tide_hourly = tide_hourly_file.read()
+    tide_extreme = tide_extreme_file.read()
 
 surf = json.loads(wave_data) # the whole json file content for wave hight
 wind = json.loads(wind_data) # the whole json file content for wind hight
-
+tide_hourly = json.loads(tide_hourly) # the whole json file content for tide hourly hight
+tide_extreme = json.loads(tide_extreme)
 
 
 
@@ -104,27 +141,69 @@ winds = wind['hours']
 for wind in winds:
     wind_direction = float(wind['windDirection']['sg'])
     wind_speed_meters_ps = float(wind['windSpeed']['sg'])
-    time = timezone(datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z")) # convert the time into datetime object
+    time = timezone(datetime.strptime(wind['time'], "%Y-%m-%dT%H:%M:%S%z")) # convert the time into datetime object and use the timezone function to convert to sydney time
 
     wave_dic[time]['wind_direction'] = effective_wind_direction(wind_direction, beach_facing_degree)
     wave_dic[time]['wind_speed_km_ph'] = wind_strength(wind_speed_meters_ps) 
 
 
-# printing for 8 am next ten days
+# with the tides info, i'm gonna create a dictionry, indide it would be a list of dictionaries
+tides_list = []
+tide_calander = {}
+extremes = tide_extreme['data']
+for tide_extreme in extremes:
+    tide_time = timezone(datetime.strptime(tide_extreme['time'], "%Y-%m-%dT%H:%M:%S%z"))
+    tide_type = tide_extreme['type']
+    tide_height = tide_extreme['height']
+
+    tide_key = tide_time.date() # here I'm createing the key of the dictionary which is the date
+    if tide_key not in tide_calander: # i'm ensuring i'm not overriding with a new list if a key already exists
+        tide_calander[tide_key] = [] # i'm creating a list for each date key
+    tide_calander[tide_key].append({ # i'm adding a dictionary to the list
+        'tide_time' : tide_time,
+        'type' : tide_type, 
+        'height' : tide_height
+        })
+
+
+#for key_wave, value in wave_dic.items():
+    #print(f" in {key_wave} the tide is {wave_dic[key_wave]['tide_level']} and the tide extremes that day are {wave_dic[key_wave]['tides'][0]}{wave_dic[key_wave]['tides'][1]}")
 today = datetime.today()
 end_day = today + timedelta(days=4)
 
+
+tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=5)
+
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"Bondi Surf Forecast {formatted_range}")
+
 
 count = 0
 
 for time, values in wave_dic.items():
     if time.hour == 8:
+        date = time.date() # Extract the date from time
+        tide_info = tide_results.get(date, {}) # Get tide info for this day
+        # Extract before and after tide details
+        before_tide = tide_info.get('before')
+        after_tide = tide_info.get('after')
+        # Check if before_tide exists before trying to use it
+        if before_tide:
+            before_tide_msg = f"{before_tide['type']} at {before_tide['tide_time'].strftime('%H:%M')}"
+        else:
+            before_tide_msg = "na"
+
+        # Check if after_tide exists before trying to use it
+        if after_tide:
+            after_tide_msg = f"{after_tide['type']} at {after_tide['tide_time'].strftime('%H:%M')}"
+        else:
+            after_tide_msg = "No tide after 8 AM"
+
         print(f"""
         🗓️ {time.strftime("%A")}
         🏄 {values['size']} ft
         💨 {values['wind_speed_km_ph']} {values['wind_direction']} wind
+        🌊 Tides: {before_tide_msg}, {after_tide_msg}
        """)
         count += 1
         if count == 5:
