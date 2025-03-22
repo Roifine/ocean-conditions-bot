@@ -1,6 +1,5 @@
 # super-duper-palm-tree
 - This Python program runs locally on my Mac and connects to an ocean conditions API to retrieve data for the next 10 days. It's designed to help surfers, swimmers, and snorkelers in Sydney, Australia, by highlighting the best conditions for their activities.
-- You can access the data with a Telegram bot called SurfReportBot. Look it up on Telegram! https://t.me/OceanReportBot
 Files and what they do
 - **bot.py** - this program, initialize the telegram bot. It serves the info stored and printed in read_and_print.py
 - **fetch_data.py** - this program fetches the data from the Storm Glass API, 2 requests are called. One for the wave data, size, period and direction. And one for the wind data, speed, and direction
