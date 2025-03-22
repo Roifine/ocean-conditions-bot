@@ -172,7 +172,7 @@ today = datetime.today()
 end_day = today + timedelta(days=4)
 
 
-tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=5)
+tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=6)
 
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"Bondi Surf Forecast {formatted_range}")
