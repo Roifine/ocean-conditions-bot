@@ -52,9 +52,9 @@ def degrees(degree: float): # Currently not in use! function to convert degrees 
     
 # this function would return the effective wind direction for the beach
 def effective_wind_direction(wind_direction :float, beach_facing_degree: int):
-    if 75 < wind_direction < 155:
+    if 30 < wind_direction < 135:
         return f"on-shore"
-    elif 190 < wind_direction < 270 or 310 < wind_direction < 350:
+    elif 185 < wind_direction < 300:
         return f"off-shore"
     else:
         return f"cross-shore"
@@ -66,7 +66,7 @@ def effective_wave_size(size_meter: float, direction: float, period: float, beac
     if 11 > period > 8:
         size_feet *= 1.1
     elif period >= 11:
-        size_feet *= 1.3
+        size_feet *= 1.2
     low = math.floor(size_feet)
     high = math.ceil(size_feet)
     return f"{low}-{high}"
@@ -119,7 +119,7 @@ tide_extreme = json.loads(tide_extreme)
 
 
 
-beach_facing_degree = 145 #hard coding to Bondi, this is used in the wind and wave size functions as an input
+beach_facing_degree = 90 # maroubra - this impacts the functions for wave size and wind quality
 heights = surf['hours']
 wave_dic = {}
 for height in heights:
@@ -174,7 +174,7 @@ end_day = today + timedelta(days=4)
 tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=6)
 
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
-print(f"Bondi Surf Forecast {formatted_range}")
+print(f"{formatted_range} 8:00 AM")
 
 
 count = 0

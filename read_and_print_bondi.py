@@ -66,7 +66,7 @@ def effective_wave_size(size_meter: float, direction: float, period: float, beac
     if 11 > period > 8:
         size_feet *= 1.1
     elif period >= 11:
-        size_feet *= 1.3
+        size_feet *= 1.2
     low = math.floor(size_feet)
     high = math.ceil(size_feet)
     return f"{low}-{high}"
@@ -174,7 +174,7 @@ end_day = today + timedelta(days=4)
 tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=6)
 
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
-print(f"Bondi Surf Forecast {formatted_range}")
+print(f"{formatted_range} 8:00 AM")
 
 
 count = 0
