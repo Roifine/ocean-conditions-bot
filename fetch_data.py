@@ -18,7 +18,7 @@ response = requests.get(
   params={
     'lat': -33.8908,
     'lng': 151.2773,
-    'params': ','.join(['swellDirection', 'swellHeight'vm, 'swellPeriod']),
+    'params': ','.join(['swellDirection', 'swellHeight', 'swellPeriod']),
     'source': 'sg'
   },
   headers={
