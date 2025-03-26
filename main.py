@@ -1,5 +1,5 @@
-from telegram import Update, Bot
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
+from telegram import Update, Bot, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, CallbackQueryHandler
 import subprocess  # Added to run the external script
 import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -37,17 +37,33 @@ class MyBot:
         await update.message.reply_text("Hello, I'm your bot! Type /surf for forecast")
         print("Reply sent")
 
-    async def surf_report(self, update: Update, context: CallbackContext):
-        """Handles /surf command by fetching surf data from an external script."""
-        print("Received /surf command")
-        try:
-            # Run the external script and capture its output
-            result = subprocess.run(["python", "read_and_print.py"], capture_output=True, text=True)
-            surf_data = result.stdout.strip() if result.returncode == 0 else "Error fetching surf data."
-        except Exception as e:
-            surf_data = f"Error fetching surf data: {e}"
+    async def surf(self, update: Update, context: CallbackContext):
 
-        await update.message.reply_text(surf_data)  # Send the surf data to the user
+        """Shows the beach selection menu and handles user input."""
+        query = update.callback_query
+
+        if query is None:  # If the user just typed /surf, show the menu
+            keyboard = [
+            [InlineKeyboardButton("Bondi Beach", callback_data="bondi")],
+            [InlineKeyboardButton("Maroubra Beach", callback_data="maroubra")]
+        ]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await update.message.reply_text("Choose a beach:", reply_markup=reply_markup)
+            return
+
+        await query.answer() # If the user clicked a button, handle their choice
+        
+        beach = query.data  # "bondi" or "maroubra"
+        print(f"User selected {beach}")
+        script_file = f"read_and_print_{beach}.py"  # Example: "bondi_forecast.py"
+
+        try:
+            result = subprocess.run(["python", script_file], capture_output=True, text=True)
+            surf_data = result.stdout.strip() if result.returncode == 0 else f"Error fetching data for {beach.capitalize()}."
+        except Exception as e:
+            surf_data = f"Error: {e}"
+
+        await query.message.reply_text(f"Surf report for {beach.capitalize()} Beach\n{surf_data}")
 
     async def on_update_received(self, update: Update, context: CallbackContext):
         msg = update.message
@@ -74,8 +90,8 @@ if __name__ == '__main__':
 
     # Register the /start command handler
     application.add_handler(CommandHandler("start", bot.start))  # Notice: use 'bot.start' here
-    application.add_handler(CommandHandler("surf", bot.surf_report))  # Added handler for /surf
-
+    application.add_handler(CommandHandler("surf", bot.surf))  # Handles /surf 
+    application.add_handler(CallbackQueryHandler(bot.surf))
 
     # Register the message handler for all text messages
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
