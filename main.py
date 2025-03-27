@@ -65,7 +65,7 @@ class MyBot:
 
         await query.message.reply_text(f"Surf report for {beach.capitalize()} Beach\n{surf_data}")
 
-    async def best_days(self, update: Update, context: CallbackContext):
+    async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
         try:
             result = subprocess.run(["python", "deep_seek.py"], capture_output=True, text=True)
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     application.add_handler(CommandHandler("start", bot.start))  # Notice: use 'bot.start' here
     application.add_handler(CommandHandler("surf", bot.surf))  # Handles /surf 
     application.add_handler(CallbackQueryHandler(bot.surf))
-    application.add_handler(CommandHandler("best_days", bot.best_days))
+    application.add_handler(CommandHandler("best_days", bot.best_waves))
 
     # Register the message handler for all text messages
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
