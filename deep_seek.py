@@ -41,7 +41,7 @@ Given surf forecasts for Bondi and Maroubra, rank the top 3 days based on:
 Wave height: (1-4ft ideal, avoid >4ft)
 Wind: (Offshore = best, Cross-shore = okay, Strong onshore = bad)
 Tides: (Mid to high = best, avoid extreme low tides)
-Response Format (Max 10 lines, Telegram-friendly):
+Response Format (Max 10 lines, Telegram-friendly, do not use * to bold):
 
 ⭐⭐⭐⭐⭐ Day - Beach
 🌊 Waves: Xft ✅ Good size
