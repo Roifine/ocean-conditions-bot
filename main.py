@@ -70,6 +70,7 @@ class MyBot:
     async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
         output = deep_seek.run()
+        print(f"User selected best")
         await update.message.reply_text(f"🏄‍♂️ Best Days (8:00 AM):\n\n{output}")
 
 
@@ -80,7 +81,7 @@ class MyBot:
         print(f"{user.name} wrote: {msg.text}")  # Print user and their message
 
         # Send a reply to the user (for example, after receiving their message)
-        await self.send_text(user.id, f"Thanks for your message {user.name}!")
+        await self.send_text(user.id, f"Oi, {user.name}! Hit the blue menu button below to see what's on offer 🏄‍♂️🤙")
     
     async def send_text(self, chat_id: int, text: str):
         """Send a message to a specific user."""
