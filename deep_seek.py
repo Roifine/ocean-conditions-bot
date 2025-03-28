@@ -60,17 +60,20 @@ Given surf forecasts for Bondi and Maroubra, rank the top 3 days/times to surf b
 Make sure you write the result in a way that would be user friendly and visual friendly in a telegram bot app. Finish with good surf wishes but never ask a question
 """
 
+def run():
+    response = client.chat.completions.create(
+        model="deepseek-chat",
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_input},
+        ],
+        stream=False
+    )
 
-response = client.chat.completions.create(
-    model="deepseek-chat",
-    messages=[
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_input},
-    ],
-    stream=False
-)
+    return response.choices[0].message.content
 
-print(response.choices[0].message.content)
 
+if __name__ == 'main':
+    run()
 
 

@@ -8,6 +8,8 @@ logger = logging.getLogger(__name__)
 import os # to load the api keys from my env file
 from dotenv import load_dotenv # to load the api keys from my env file
 
+import deep_seek
+
 if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
@@ -67,13 +69,7 @@ class MyBot:
 
     async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
-        try:
-            result = subprocess.run(["python", "deep_seek.py"], capture_output=True, text=True, check=True)
-            output = result.stdout.strip() if result.returncode == 0 else "⚠️ Error fetching the best days."
-
-        except Exception as e:
-            output = f"❌ Error: {e}"
-
+        output = deep_seek.run()
         await update.message.reply_text(f"🏄‍♂️ Best Surf Days:\n{output}")
 
 
