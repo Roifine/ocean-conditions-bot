@@ -99,9 +99,9 @@ if __name__ == '__main__':
 
     # Register the /start command handler
     application.add_handler(CommandHandler("start", bot.start))  # Notice: use 'bot.start' here
-    application.add_handler(CommandHandler("surf", bot.surf))  # Handles /surf 
+    application.add_handler(CommandHandler("forecast", bot.surf))  # Handles /surf 
     application.add_handler(CallbackQueryHandler(bot.surf))
-    application.add_handler(CommandHandler("bestwaves", bot.best_waves))
+    application.add_handler(CommandHandler("best", bot.best_waves))
 
     # Register the message handler for all text messages
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
