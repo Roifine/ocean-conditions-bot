@@ -15,12 +15,14 @@ def get_forecast(script_name):
     result = subprocess.run(
         ["python", script_name], 
         capture_output=True, 
-        text=True
+        text=True,
+        check=True
     )
+
     return result.stdout
 
-bondi_forecast = get_forecast("print_and_read_bondi.py")
-maroubra_forecast = get_forecast("print_and_read_maroubra.py")
+bondi_forecast = get_forecast("read_and_print_bondi.py")
+maroubra_forecast = get_forecast("read_and_print_maroubra.py")
 
 # Step 2: Combine forecasts into a single prompt
 user_input = f"""
@@ -55,7 +57,7 @@ Given surf forecasts for Bondi and Maroubra, rank the top 3 days/times to surf b
 **Avoid:**  
 - Days with waves >4ft (dangerous for beginners)  
 - Strong onshore winds  
-Make sure you write the result in a way that would be user friendly and visual friendly in a telegram bot app
+Make sure you write the result in a way that would be user friendly and visual friendly in a telegram bot app. Finish with good surf wishes but never ask a question
 """
 
 
