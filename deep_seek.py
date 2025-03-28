@@ -43,8 +43,6 @@ Wind: (Offshore = best, Cross-shore = okay, Strong onshore = bad)
 Tides: (Mid to high = best, avoid extreme low tides)
 Response Format (Max 10 lines, Telegram-friendly):
 
-🏄‍♂️ Best Surf Sessions
-
 ⭐⭐⭐⭐⭐ [Day] - [Beach]
 🌊 Waves: [Xft] ✅ (Good size)
 💨 Wind: [Offshore/OK]
