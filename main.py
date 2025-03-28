@@ -70,7 +70,7 @@ class MyBot:
     async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
         output = deep_seek.run()
-        await update.message.reply_text(f"🏄‍♂️ Best Surf Days:\n\n{output}")
+        await update.message.reply_text(f"🏄‍♂️ Best Days (8:00 AM):\n\n{output}")
 
 
    

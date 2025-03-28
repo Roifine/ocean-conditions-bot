@@ -43,20 +43,20 @@ Wind: (Offshore = best, Cross-shore = okay, Strong onshore = bad)
 Tides: (Mid to high = best, avoid extreme low tides)
 Response Format (Max 10 lines, Telegram-friendly):
 
-⭐⭐⭐⭐⭐ [Day] - [Beach]
-🌊 Waves: [Xft] ✅ (Good size)
-💨 Wind: [Offshore/OK]
-🌊 Tide: [Mid-High] ✅
+⭐⭐⭐⭐⭐ Day - Beach
+🌊 Waves: Xft ✅ Good size
+💨 Wind: Offshore/OK
+🌊 Tide: Mid-High ✅
 
-⭐⭐⭐⭐ [Day] - [Beach]
-🌊 Waves: [Xft] ✅
-💨 Wind: [Offshore/Cross-shore]
-🌊 Tide: [Mid-High] ✅
+⭐⭐⭐⭐ Day - Beach
+🌊 Waves: Xft ✅
+💨 Wind: Offshore/Cross-shore
+🌊 Tide: Mid-High ✅
 
-⭐⭐⭐ [Day] - [Beach]
-🌊 Waves: [Xft] ✅
-💨 Wind: [Cross-shore]
-🌊 Tide: [OK]
+⭐⭐⭐ Day - Beach
+🌊 Waves: Xft ✅
+💨 Wind: On-shore ❌
+🌊 Tide: Low ❌
 """
 
 def run():
