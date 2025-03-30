@@ -69,7 +69,10 @@ def effective_wave_size(size_meter: float, direction: float, period: float, beac
         size_feet *= 1.2
     low = math.floor(size_feet)
     high = math.ceil(size_feet)
-    return f"{low}-{high}"
+    if low != high:
+        return f"{low}-{high}"
+    else:
+        return f"{low}-{high+1}"
 
 
 def find_closest_tides(tide_calander, target_time="8:00", days_ahead=5):
