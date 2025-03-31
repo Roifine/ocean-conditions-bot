@@ -13,18 +13,17 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12.7'
-          
-      - name: Run Script 1 with STORM API
+
+      - name: Install requirements
+      - run: pip install
+      
+      - name: Fetch latest API data
         env:
           API_KEY: ${{ secrets.STORM.API }}
         run: python fetch_data.py
 
-      - name: Run Script 2 with TELEGRAM API
-        env:
-          API_KEY: ${{ secrets.TELEGRAM.API }}
-        run: main.py
+      - name: Commit changes
+        run: git commit -a -m "Latest API data"
 
-      - name: Run Script 3 with DEEPSEEK API
-        env:
-          API_KEY: ${{ secrets.DEEPSEEK.API }}
-        run: deep_seek.py
+      - name: Push changes
+        run: git push
