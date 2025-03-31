@@ -24,6 +24,11 @@ jobs:
           API_KEY: ${{ secrets.STORM.API }}
         run: python fetch_data.py
 
+      - name: Set up authentication
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Roifine/ocean-conditions-bot.git
+
+      
       - name: Configure Git user
         run: |
           git config --local user.name "GitHub Actions Bot"
