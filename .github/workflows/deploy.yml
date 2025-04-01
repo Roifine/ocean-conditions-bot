@@ -23,7 +23,7 @@ jobs:
       
       - name: Fetch latest API data
         env:
-          API_KEY: ${{ secrets.STORM_API }}
+          API_KEY: ${{ secrets.STORM.API }}
         run: python fetch_data.py
       
       - name: Configure Git user
