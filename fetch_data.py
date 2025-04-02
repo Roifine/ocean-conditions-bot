@@ -9,7 +9,7 @@ from dotenv import load_dotenv # to load the api keys from my env file
 if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
-storm_api = os.getenv("storm_api")  # Now, API_KEY contains "your_secret_key_here"
+STORM_API = os.getenv("STORM_API")  # Now, API_KEY contains "your_secret_key_here"
 
 
 # fetching the WAVES data
@@ -23,7 +23,7 @@ response = requests.get(
   },
   headers={
 
-    'Authorization': storm_api
+    'Authorization': STORM_API
   }
 )
 ###
@@ -50,7 +50,7 @@ response = requests.get(
   },
   headers={
 
-    'Authorization': storm_api
+    'Authorization': STORM_API
 
   }
 )
@@ -78,7 +78,7 @@ response = requests.get(
     'lng': 151.2773,
   },
   headers={
-    'Authorization': storm_api
+    'Authorization': STORM_API
   }
 )
 
@@ -101,7 +101,7 @@ response2 = requests.get(
     'lng': 151.2773,
   },
   headers={
-    'Authorization': storm_api
+    'Authorization': STORM_API
   }
 )
 
