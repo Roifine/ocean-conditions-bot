@@ -1,5 +1,9 @@
 {
     "errors": {
-        "key": "API key is invalid"
+        "key": "API quota exceeded"
+    },
+    "meta": {
+        "dailyQuota": 10,
+        "requestCount": 11
     }
 }

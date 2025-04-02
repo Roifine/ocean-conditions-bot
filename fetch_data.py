@@ -11,6 +11,10 @@ if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env o
 
 STORM_API = os.getenv("STORM_API")  # Now, API_KEY contains "your_secret_key_here"
 
+print(f"STORM_API from env: {os.environ.get('STORM_API')}")
+
+print(f"API Key (raw): '{STORM_API}'")
+
 # Debugging: Check if API Key is loaded (DO NOT print actual key!)
 print(f"API key loaded: {'Yes' if STORM_API else 'No'}")  # Debugging only
 
