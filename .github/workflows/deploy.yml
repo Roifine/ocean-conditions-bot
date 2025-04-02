@@ -34,6 +34,9 @@ jobs:
       - name: Commit changes
         run: git commit -a -m "Latest API data"
 
+      - name: Debug environment variables
+        run: env | grep STORM_API
+
       - name: Push changes
         run: git push
         env: 
