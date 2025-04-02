@@ -11,6 +11,13 @@ if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env o
 
 STORM_API = os.getenv("STORM_API")  # Now, API_KEY contains "your_secret_key_here"
 
+# Debugging: Check if API Key is loaded (DO NOT print actual key!)
+print(f"API key loaded: {'Yes' if STORM_API else 'No'}")  # Debugging only
+
+# Validate API Key before making the request
+if not STORM_API:
+    raise ValueError("API Key not found! Make sure it's set in the environment variables.")
+
 
 # fetching the WAVES data
 response = requests.get(
