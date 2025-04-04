@@ -25,7 +25,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Debug environment variables before running fetch_data.py
-        run: env | grep STORM_API  # This will check if STORM_API is set
+        env:
+          STORM_API: ${{ secrets.STORM_API }}
+        run: env | grep STORM_API || echo "STORM_API not set"
       
       - name: Fetch latest API data
         env:
