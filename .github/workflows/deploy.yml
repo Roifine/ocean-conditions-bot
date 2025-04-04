@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Runs at 6 AM UTC = 5 PM Sydney Time
+    - cron: '0 7 * * *'  # Runs at 6 AM UTC = 5 PM Sydney Time
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
