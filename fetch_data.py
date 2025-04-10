@@ -96,11 +96,10 @@ response = requests.get(
 # Do something with response data.
 tide_extreme_data = response.json()
 
-
-
 with open("tide_extreme_data.json", "w") as my_file:
     tide_extreme_data = json.dumps(tide_extreme_data, indent=4)
     my_file.write(tide_extreme_data)
+
 
 
 
@@ -117,9 +116,16 @@ response2 = requests.get(
 )
 
 
-
 tide_hourly_data = response2.json()
+errors = tide_hourly_data["errors"]
 
-with open("tide_hourly_data.json", "w") as my_file:
-    tide_hourly_data = json.dumps(tide_hourly_data, indent=4)
-    my_file.write(tide_hourly_data)
+
+print(errors)
+if errors is None:
+  with open("tide_hourly_data.json", "w") as my_file:
+      tide_hourly_data = json.dumps(tide_hourly_data, indent=4)
+      my_file.write(tide_hourly_data)
+else:
+  print(errors)
+
+
