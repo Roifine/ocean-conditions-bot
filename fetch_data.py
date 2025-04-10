@@ -23,6 +23,17 @@ if not STORM_API:
     raise ValueError("API Key not found! Make sure it's set in the environment variables.")
 
 
+
+def write_api_data(json_data: dict, file_name: str):
+  errors = json_data.get("errors")
+  if errors is None:
+    with open(file_name, "w") as my_file:
+      json_data = json.dumps(json_data, indent=4)
+      my_file.write(json_data)
+  else:
+    print(errors)
+   
+
 # fetching the WAVES data
 response = requests.get(
   'https://api.stormglass.io/v2/weather/point',
@@ -40,11 +51,9 @@ response = requests.get(
 ###
 # Do something with response data.
 wave_data = response.json()
+write_api_data(wave_data, "wave_forecast.json")
 
 
-with open("wave_forecast.json", "w") as my_file:
-    wave_data = json.dumps(wave_data, indent=4)
-    my_file.write(wave_data)
 
 
 #fetching the WIND data
@@ -68,14 +77,7 @@ response = requests.get(
 ###
 # Do something with response data.
 wind_data = response.json()
-
-#fetching the WIND data
-
-
-
-with open("wind_forecast.json", "w") as other_file:
-    wind_data = json.dumps(wind_data, indent=4)
-    other_file.write(wind_data)
+write_api_data(wind_data, "wind_forecast.json")
 
 
 
@@ -95,37 +97,11 @@ response = requests.get(
 
 # Do something with response data.
 tide_extreme_data = response.json()
-
-with open("tide_extreme_data.json", "w") as my_file:
-    tide_extreme_data = json.dumps(tide_extreme_data, indent=4)
-    my_file.write(tide_extreme_data)
+write_api_data(tide_extreme_data, "tide_extreme_data.json")
 
 
 
 
 
-response2 = requests.get(
-  'https://api.stormglass.io/v2/tide/sea-level/point', 
-  params={
-    'lat': -33.8908,
-    'lng': 151.2773,
-  },
-  headers={
-    'Authorization': STORM_API
-  }
-)
-
-
-tide_hourly_data = response2.json()
-errors = tide_hourly_data.get("errors")
-
-
-print(errors)
-if errors is None:
-  with open("tide_hourly_data.json", "w") as my_file:
-      tide_hourly_data = json.dumps(tide_hourly_data, indent=4)
-      my_file.write(tide_hourly_data)
-else:
-  print(errors)
 
 
