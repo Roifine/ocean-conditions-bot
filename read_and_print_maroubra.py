@@ -109,15 +109,13 @@ def find_closest_tides(tide_calander, target_time="8:00", days_ahead=5):
     return tide_summary
       
 
-with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file, open("tide_hourly_data.json") as tide_hourly_file, open("tide_extreme_data.json") as tide_extreme_file :
+with open("wave_forecast.json") as wave_file, open("wind_forecast.json") as wind_file, open("tide_extreme_data.json") as tide_extreme_file :
     wave_data = wave_file.read()
     wind_data = wind_file.read()
-    tide_hourly = tide_hourly_file.read()
     tide_extreme = tide_extreme_file.read()
 
 surf = json.loads(wave_data) # the whole json file content for wave hight
 wind = json.loads(wind_data) # the whole json file content for wind hight
-tide_hourly = json.loads(tide_hourly) # the whole json file content for tide hourly hight
 tide_extreme = json.loads(tide_extreme)
 
 
