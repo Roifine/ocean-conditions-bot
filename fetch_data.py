@@ -117,7 +117,7 @@ response2 = requests.get(
 
 
 tide_hourly_data = response2.json()
-errors = tide_hourly_data["errors"]
+errors = tide_hourly_data.get("errors")
 
 
 print(errors)
