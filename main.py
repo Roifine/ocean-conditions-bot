@@ -65,7 +65,7 @@ class MyBot:
         except Exception as e:
             surf_data = f"Error: {e}"
 
-        await query.message.reply_text(f"Surf report for {beach.capitalize()} Beach\n{surf_data}")
+        await query.message.reply_text(f"{beach.capitalize()} Beach\n{surf_data}")
 
     async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
