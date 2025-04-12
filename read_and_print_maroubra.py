@@ -176,6 +176,9 @@ tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=6)
 
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"{formatted_range} 8:00 AM")
+last_update = surf["last_updated"]
+dt = datetime.strptime(last_update, "%Y-%m-%d %H:%M:%S")
+print(f"Last Updated: {dt.strftime("%H:%M:%S")}")
 
 
 count = 0
