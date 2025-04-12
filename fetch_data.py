@@ -1,4 +1,6 @@
 # this is the file to test how to fetch the data from storm glass API
+from datetime import datetime
+import pytz
 import json
 import requests
 import arrow
@@ -27,9 +29,11 @@ if not STORM_API:
 def write_api_data(json_data: dict, file_name: str):
   errors = json_data.get("errors")
   if errors is None:
+    last_updated = datetime.now(pytz.timezone("Australia/Sydney")).strftime("%Y-%m-%d %H:%M:%S")
+    json_data["last_updated"] = last_updated
     with open(file_name, "w") as my_file:
-      json_data = json.dumps(json_data, indent=4)
-      my_file.write(json_data)
+      json.dump(json_data, my_file, indent=4)
+  
   else:
     print(errors)
    
