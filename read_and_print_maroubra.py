@@ -178,8 +178,9 @@ formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"{formatted_range} 8:00 AM")
 last_update = surf["last_updated"]
 dt = datetime.strptime(last_update, "%Y-%m-%d %H:%M:%S")
-print(f"Last Updated: {dt.strftime("%H:%M:%S")}")
-
+time_now = datetime.now(pytz.timezone("Australia/Sydney")).strftime("%Y-%m-%d %H:%M:%S")
+xt = datetime.strptime(time_now, "%Y-%m-%d %H:%M:%S")
+print(f"Updated {xt-dt} ago")
 
 count = 0
 
