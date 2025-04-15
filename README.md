@@ -1,4 +1,4 @@
-# super-duper-palm-tree
+# ocean-conditions-bot
 - This Python program runs locally on my Mac and connects to an ocean conditions API to retrieve data for the next 10 days. It's designed to help surfers, swimmers, and snorkelers in Sydney, Australia, by highlighting the best conditions for their activities.
 Files and what they do
 - **bot.py** - this program, initialize the telegram bot. It serves the info stored and printed in read_and_print.py
