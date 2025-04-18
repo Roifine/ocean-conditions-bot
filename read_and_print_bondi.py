@@ -16,6 +16,7 @@ def timezone(xtime):
 
     return sydney_time
 
+
 # function to convert speed from meter per second to kilometer per hour and also defines the strength of the wind
 
 def wind_strength(wind_speed_meters_ps: float):
@@ -183,7 +184,7 @@ xt = datetime.strptime(time_now, "%Y-%m-%d %H:%M:%S")
 print(f"Updated {xt-dt} ago")
 
 count = 0
-
+forecast_api = []
 for time, values in wave_dic.items():
     if time.hour == 8:
         date = time.date() # Extract the date from time
@@ -209,11 +210,52 @@ for time, values in wave_dic.items():
         💨 {values['wind_speed_km_ph']} {values['wind_direction']} wind
         🌊 Tides: {before_tide_msg}, {after_tide_msg}
        """)
+        
+        forecast_api.append({
+            "day": time.strftime("%A"),
+            "wave_height": values['size'],
+            "wind": f"{values['wind_speed_km_ph']} {values['wind_direction']}",
+            "tides":f"{before_tide_msg}, {after_tide_msg}"
+        })
+
+        
         count += 1
         if count == 5:
             break
         
-       
+def get_forecast():
+    count = 0
+    forecast_api = []
+    for time, values in wave_dic.items():
+        if time.hour == 8:
+            date = time.date() # Extract the date from time
+            tide_info = tide_results.get(date, {}) # Get tide info for this day
+            # Extract before and after tide details
+            before_tide = tide_info.get('before')
+            after_tide = tide_info.get('after')
+            # Check if before_tide exists before trying to use it
+            if before_tide:
+                before_tide_msg = f"{before_tide['type']} at {before_tide['tide_time'].strftime('%H:%M')}"
+            else:
+                before_tide_msg = "na"
+
+            # Check if after_tide exists before trying to use it
+            if after_tide:
+                after_tide_msg = f"{after_tide['type']} at {after_tide['tide_time'].strftime('%H:%M')}"
+            else:
+                after_tide_msg = "No tide after 8 AM"
+            
+            forecast_api.append({
+            "day": time.strftime("%A"),
+            "date": time.strftime("%Y-%m-%d"),
+            "wave_height": values['size'],
+            "wind": f"{values['wind_speed_km_ph']} {values['wind_direction']}",
+            "tides": f"{before_tide_msg}, {after_tide_msg}"
+            })
+            count += 1
+            if count == 5:
+                break
+    return forecast_api
 
 
 
