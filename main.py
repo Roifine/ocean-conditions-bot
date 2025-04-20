@@ -19,12 +19,6 @@ if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env o
 
 telegram_api = os.getenv("telegram_api")  # Now, API_KEY contains "your_secret_key_here"
 
-app = Flask(__name__)
-
-@app.route("/forecast")
-def forecast():
-    return jsonify({"message": "Surf API is alive and kicking!"})
-
 
 class MyBot:
     def __init__(self, token):
@@ -103,8 +97,7 @@ class MyBot:
             print(f"Error sending message: {e}")
 
 def run_flask():
-    port = int(os.environ.get("PORT", 8080))
-    app.run(debug=False, host="0.0.0.0", port=port)
+    import api  # this runs the Flask app defined in api.py
 
 if __name__ == '__main__':
     threading.Thread(target=run_flask).start()
