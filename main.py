@@ -97,8 +97,10 @@ class MyBot:
             print(f"Error sending message: {e}")
 
 def run_flask():
-    import api  # this runs the Flask app defined in api.py
-
+    from api import app
+    port = int(os.environ.get("PORT", 8080))
+    app.run(debug=False, host="0.0.0.0", port=port)
+    
 if __name__ == '__main__':
     threading.Thread(target=run_flask).start()
 
