@@ -6,14 +6,25 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 import os # to load the api keys from my env file
+
 from dotenv import load_dotenv # to load the api keys from my env file
 
 import deep_seek
+
+from flask import Flask, jsonify
+import threading
 
 if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
 telegram_api = os.getenv("telegram_api")  # Now, API_KEY contains "your_secret_key_here"
+
+app = Flask(__name__)
+
+@app.route("/forecast")
+def forecast():
+    return jsonify({"message": "Surf API is alive and kicking!"})
+
 
 class MyBot:
     def __init__(self, token):
@@ -91,8 +102,13 @@ class MyBot:
         except Exception as e:
             print(f"Error sending message: {e}")
 
+def run_flask():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(debug=False, host="0.0.0.0", port=port)
 
 if __name__ == '__main__':
+    threading.Thread(target=run_flask).start()
+
     bot = MyBot(token=telegram_api)  # Initialize the bot
 
     # Create an instance of the Application with your bot's token
