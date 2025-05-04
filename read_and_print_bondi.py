@@ -177,11 +177,23 @@ tide_results = find_closest_tides(tide_calander, "08:00", days_ahead=6)
 
 formatted_range = f"{today.day}-{end_day.day}.{today.month}"
 print(f"{formatted_range} 8:00 AM")
+# Your timezone
+tz = pytz.timezone("Australia/Sydney")
+
+# Parse and localize the old timestamp
 last_update = surf["last_updated"]
-dt = datetime.strptime(last_update, "%Y-%m-%d %H:%M:%S")
-time_now = datetime.now(pytz.timezone("Australia/Sydney")).strftime("%Y-%m-%d %H:%M:%S")
-xt = datetime.strptime(time_now, "%Y-%m-%d %H:%M:%S")
-print(f"Updated {xt-dt} ago")
+dt_naive = datetime.strptime(last_update, "%Y-%m-%d %H:%M:%S")
+dt = tz.localize(dt_naive)
+
+# Get current time in same timezone
+time_now = datetime.now(tz)
+
+# Calculate difference
+diff = time_now - dt
+hours_ago = int(diff.total_seconds() // 3600)
+
+print(f"Updated {hours_ago} hours ago")
+
 
 count = 0
 forecast_api = []
