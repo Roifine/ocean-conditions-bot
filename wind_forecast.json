@@ -1,222 +1,6 @@
 {
     "hours": [
         {
-            "time": "2025-08-09T00:00:00+00:00",
-            "windDirection": {
-                "sg": 149.26
-            },
-            "windSpeed": {
-                "sg": 4.85
-            }
-        },
-        {
-            "time": "2025-08-09T01:00:00+00:00",
-            "windDirection": {
-                "sg": 152.68
-            },
-            "windSpeed": {
-                "sg": 5.54
-            }
-        },
-        {
-            "time": "2025-08-09T02:00:00+00:00",
-            "windDirection": {
-                "sg": 156.1
-            },
-            "windSpeed": {
-                "sg": 6.23
-            }
-        },
-        {
-            "time": "2025-08-09T03:00:00+00:00",
-            "windDirection": {
-                "sg": 159.52
-            },
-            "windSpeed": {
-                "sg": 6.92
-            }
-        },
-        {
-            "time": "2025-08-09T04:00:00+00:00",
-            "windDirection": {
-                "sg": 158.92
-            },
-            "windSpeed": {
-                "sg": 6.83
-            }
-        },
-        {
-            "time": "2025-08-09T05:00:00+00:00",
-            "windDirection": {
-                "sg": 158.31
-            },
-            "windSpeed": {
-                "sg": 6.73
-            }
-        },
-        {
-            "time": "2025-08-09T06:00:00+00:00",
-            "windDirection": {
-                "sg": 157.71
-            },
-            "windSpeed": {
-                "sg": 6.64
-            }
-        },
-        {
-            "time": "2025-08-09T07:00:00+00:00",
-            "windDirection": {
-                "sg": 152.14
-            },
-            "windSpeed": {
-                "sg": 6.71
-            }
-        },
-        {
-            "time": "2025-08-09T08:00:00+00:00",
-            "windDirection": {
-                "sg": 146.58
-            },
-            "windSpeed": {
-                "sg": 6.78
-            }
-        },
-        {
-            "time": "2025-08-09T09:00:00+00:00",
-            "windDirection": {
-                "sg": 141.01
-            },
-            "windSpeed": {
-                "sg": 6.85
-            }
-        },
-        {
-            "time": "2025-08-09T10:00:00+00:00",
-            "windDirection": {
-                "sg": 154.1
-            },
-            "windSpeed": {
-                "sg": 5.36
-            }
-        },
-        {
-            "time": "2025-08-09T11:00:00+00:00",
-            "windDirection": {
-                "sg": 167.19
-            },
-            "windSpeed": {
-                "sg": 3.87
-            }
-        },
-        {
-            "time": "2025-08-09T12:00:00+00:00",
-            "windDirection": {
-                "sg": 180.28
-            },
-            "windSpeed": {
-                "sg": 2.38
-            }
-        },
-        {
-            "time": "2025-08-09T13:00:00+00:00",
-            "windDirection": {
-                "sg": 180.7
-            },
-            "windSpeed": {
-                "sg": 2.83
-            }
-        },
-        {
-            "time": "2025-08-09T14:00:00+00:00",
-            "windDirection": {
-                "sg": 181.11
-            },
-            "windSpeed": {
-                "sg": 3.29
-            }
-        },
-        {
-            "time": "2025-08-09T15:00:00+00:00",
-            "windDirection": {
-                "sg": 181.53
-            },
-            "windSpeed": {
-                "sg": 3.74
-            }
-        },
-        {
-            "time": "2025-08-09T16:00:00+00:00",
-            "windDirection": {
-                "sg": 183.86
-            },
-            "windSpeed": {
-                "sg": 5.0
-            }
-        },
-        {
-            "time": "2025-08-09T17:00:00+00:00",
-            "windDirection": {
-                "sg": 186.18
-            },
-            "windSpeed": {
-                "sg": 6.27
-            }
-        },
-        {
-            "time": "2025-08-09T18:00:00+00:00",
-            "windDirection": {
-                "sg": 188.51
-            },
-            "windSpeed": {
-                "sg": 7.53
-            }
-        },
-        {
-            "time": "2025-08-09T19:00:00+00:00",
-            "windDirection": {
-                "sg": 182.89
-            },
-            "windSpeed": {
-                "sg": 7.61
-            }
-        },
-        {
-            "time": "2025-08-09T20:00:00+00:00",
-            "windDirection": {
-                "sg": 177.28
-            },
-            "windSpeed": {
-                "sg": 7.69
-            }
-        },
-        {
-            "time": "2025-08-09T21:00:00+00:00",
-            "windDirection": {
-                "sg": 171.66
-            },
-            "windSpeed": {
-                "sg": 7.77
-            }
-        },
-        {
-            "time": "2025-08-09T22:00:00+00:00",
-            "windDirection": {
-                "sg": 172.76
-            },
-            "windSpeed": {
-                "sg": 7.2
-            }
-        },
-        {
-            "time": "2025-08-09T23:00:00+00:00",
-            "windDirection": {
-                "sg": 173.85
-            },
-            "windSpeed": {
-                "sg": 6.62
-            }
-        },
-        {
             "time": "2025-08-10T00:00:00+00:00",
             "windDirection": {
                 "sg": 174.95
@@ -2168,23 +1952,239 @@
             "windSpeed": {
                 "sg": 8.13
             }
+        },
+        {
+            "time": "2025-08-19T01:00:00+00:00",
+            "windDirection": {
+                "sg": 261.24
+            },
+            "windSpeed": {
+                "sg": 7.95
+            }
+        },
+        {
+            "time": "2025-08-19T02:00:00+00:00",
+            "windDirection": {
+                "sg": 256.35
+            },
+            "windSpeed": {
+                "sg": 7.77
+            }
+        },
+        {
+            "time": "2025-08-19T03:00:00+00:00",
+            "windDirection": {
+                "sg": 251.46
+            },
+            "windSpeed": {
+                "sg": 7.59
+            }
+        },
+        {
+            "time": "2025-08-19T04:00:00+00:00",
+            "windDirection": {
+                "sg": 232.67
+            },
+            "windSpeed": {
+                "sg": 7.16
+            }
+        },
+        {
+            "time": "2025-08-19T05:00:00+00:00",
+            "windDirection": {
+                "sg": 213.89
+            },
+            "windSpeed": {
+                "sg": 6.72
+            }
+        },
+        {
+            "time": "2025-08-19T06:00:00+00:00",
+            "windDirection": {
+                "sg": 195.1
+            },
+            "windSpeed": {
+                "sg": 6.29
+            }
+        },
+        {
+            "time": "2025-08-19T07:00:00+00:00",
+            "windDirection": {
+                "sg": 194.83
+            },
+            "windSpeed": {
+                "sg": 6.96
+            }
+        },
+        {
+            "time": "2025-08-19T08:00:00+00:00",
+            "windDirection": {
+                "sg": 194.57
+            },
+            "windSpeed": {
+                "sg": 7.64
+            }
+        },
+        {
+            "time": "2025-08-19T09:00:00+00:00",
+            "windDirection": {
+                "sg": 194.3
+            },
+            "windSpeed": {
+                "sg": 8.31
+            }
+        },
+        {
+            "time": "2025-08-19T10:00:00+00:00",
+            "windDirection": {
+                "sg": 196.05
+            },
+            "windSpeed": {
+                "sg": 7.95
+            }
+        },
+        {
+            "time": "2025-08-19T11:00:00+00:00",
+            "windDirection": {
+                "sg": 197.81
+            },
+            "windSpeed": {
+                "sg": 7.59
+            }
+        },
+        {
+            "time": "2025-08-19T12:00:00+00:00",
+            "windDirection": {
+                "sg": 199.56
+            },
+            "windSpeed": {
+                "sg": 7.23
+            }
+        },
+        {
+            "time": "2025-08-19T13:00:00+00:00",
+            "windDirection": {
+                "sg": 202.43
+            },
+            "windSpeed": {
+                "sg": 7.18
+            }
+        },
+        {
+            "time": "2025-08-19T14:00:00+00:00",
+            "windDirection": {
+                "sg": 205.31
+            },
+            "windSpeed": {
+                "sg": 7.14
+            }
+        },
+        {
+            "time": "2025-08-19T15:00:00+00:00",
+            "windDirection": {
+                "sg": 208.18
+            },
+            "windSpeed": {
+                "sg": 7.09
+            }
+        },
+        {
+            "time": "2025-08-19T16:00:00+00:00",
+            "windDirection": {
+                "sg": 210.25
+            },
+            "windSpeed": {
+                "sg": 7.39
+            }
+        },
+        {
+            "time": "2025-08-19T17:00:00+00:00",
+            "windDirection": {
+                "sg": 212.33
+            },
+            "windSpeed": {
+                "sg": 7.69
+            }
+        },
+        {
+            "time": "2025-08-19T18:00:00+00:00",
+            "windDirection": {
+                "sg": 214.4
+            },
+            "windSpeed": {
+                "sg": 7.99
+            }
+        },
+        {
+            "time": "2025-08-19T19:00:00+00:00",
+            "windDirection": {
+                "sg": 220.37
+            },
+            "windSpeed": {
+                "sg": 7.72
+            }
+        },
+        {
+            "time": "2025-08-19T20:00:00+00:00",
+            "windDirection": {
+                "sg": 226.35
+            },
+            "windSpeed": {
+                "sg": 7.44
+            }
+        },
+        {
+            "time": "2025-08-19T21:00:00+00:00",
+            "windDirection": {
+                "sg": 232.32
+            },
+            "windSpeed": {
+                "sg": 7.17
+            }
+        },
+        {
+            "time": "2025-08-19T22:00:00+00:00",
+            "windDirection": {
+                "sg": 235.18
+            },
+            "windSpeed": {
+                "sg": 6.75
+            }
+        },
+        {
+            "time": "2025-08-19T23:00:00+00:00",
+            "windDirection": {
+                "sg": 238.05
+            },
+            "windSpeed": {
+                "sg": 6.33
+            }
+        },
+        {
+            "time": "2025-08-20T00:00:00+00:00",
+            "windDirection": {
+                "sg": 240.91
+            },
+            "windSpeed": {
+                "sg": 5.91
+            }
         }
     ],
     "meta": {
         "cost": 1,
         "dailyQuota": 10,
-        "end": "2025-08-19 00:00",
+        "end": "2025-08-20 00:00",
         "lat": -33.8908,
         "lng": 151.2773,
         "params": [
             "windDirection",
             "windSpeed"
         ],
-        "requestCount": 5,
+        "requestCount": 2,
         "source": [
             "sg"
         ],
-        "start": "2025-08-09 00:00"
+        "start": "2025-08-10 00:00"
     },
-    "last_updated": "2025-08-10 05:15:48"
+    "last_updated": "2025-08-10 17:12:59"
 }
