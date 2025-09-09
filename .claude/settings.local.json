@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/roifine/My python projects/Best Surf app /**)",
+      "Read(//Users/roifine/My python projects/Best Surf app /surf-forecast-2/**)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(/Users/roifine/My python projects/Best Surf app /myenv/bin/python today_analysis.py)",
+      "Bash(pkill:*)",
+      "Bash(./myenv/bin/python:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

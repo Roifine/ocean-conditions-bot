@@ -10,6 +10,7 @@ import os # to load the api keys from my env file
 from dotenv import load_dotenv # to load the api keys from my env file
 
 import deep_seek
+import today_analysis
 
 from flask import Flask, jsonify
 import threading
@@ -17,7 +18,7 @@ import threading
 if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
-telegram_api = os.getenv("telegram_api")  # Now, API_KEY contains "your_secret_key_here"
+telegram_api = os.getenv("TELEGRAM_API")  # Now, API_KEY contains "your_secret_key_here"
 
 
 class MyBot:
@@ -78,6 +79,18 @@ class MyBot:
         print(f"User selected best")
         await update.message.reply_text(f"🏄‍♂️ Best Days (8:00 AM):\n\n{output}")
 
+    async def today_surf(self, update: Update, context: CallbackContext):
+        """Fetches today's AI surf analysis and sends it to the user."""
+        try:
+            print(f"User requested today's analysis - starting...")
+            analysis = today_analysis.get_cached_today_analysis()
+            print(f"Analysis retrieved successfully")
+            await update.message.reply_text(f"🏄‍♂️ {analysis['analysis']}")
+            print(f"Message sent to user")
+        except Exception as e:
+            print(f"Error in today_surf: {e}")
+            await update.message.reply_text(f"Sorry, couldn't get today's analysis: {e}")
+
 
    
     async def on_update_received(self, update: Update, context: CallbackContext):
@@ -114,6 +127,7 @@ if __name__ == '__main__':
     application.add_handler(CommandHandler("forecast", bot.surf))  # Handles /surf 
     application.add_handler(CallbackQueryHandler(bot.surf))
     application.add_handler(CommandHandler("best", bot.best_waves))
+    application.add_handler(CommandHandler("today", bot.today_surf))
 
     # Register the message handler for all text messages
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
