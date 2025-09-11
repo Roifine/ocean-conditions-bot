@@ -3,12 +3,8 @@ import os # to load the api keys from my env file
 import subprocess
 from dotenv import load_dotenv # to load the api keys from my env file
 
-if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
+if os.getenv("GITHUB_ACTIONS") is None and os.getenv("RAILWAY_ENVIRONMENT") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
-
-deepseek_api = os.getenv("DEEPSEEK_API")  # Now, API_KEY contains "your_secret_key_here"
-
-client = OpenAI(api_key=deepseek_api, base_url="https://api.deepseek.com")
 
 # Step 1: Run your existing scripts and capture their output
 def get_forecast(script_name):
@@ -20,18 +16,6 @@ def get_forecast(script_name):
     )
 
     return result.stdout
-
-bondi_forecast = get_forecast("read_and_print_bondi.py")
-maroubra_forecast = get_forecast("read_and_print_maroubra.py")
-
-# Step 2: Combine forecasts into a single prompt
-user_input = f"""
-**Bondi Forecast**
-{bondi_forecast}
-
-**Maroubra Forecast**
-{maroubra_forecast}
-"""
 
 
 system_prompt = """
@@ -60,6 +44,25 @@ Response Format (Max 10 lines, Telegram-friendly, do not use * to bold):
 """
 
 def run():
+    # Get forecasts when function is called, not at import time
+    bondi_forecast = get_forecast("read_and_print_bondi.py")
+    maroubra_forecast = get_forecast("read_and_print_maroubra.py")
+
+    # Combine forecasts into a single prompt
+    user_input = f"""
+**Bondi Forecast**
+{bondi_forecast}
+
+**Maroubra Forecast**
+{maroubra_forecast}
+"""
+
+    deepseek_api = os.getenv("DEEPSEEK_API")
+    if not deepseek_api:
+        raise ValueError("DEEPSEEK_API environment variable not found")
+    
+    client = OpenAI(api_key=deepseek_api, base_url="https://api.deepseek.com")
+    
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[

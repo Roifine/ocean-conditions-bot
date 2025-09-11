@@ -8,7 +8,7 @@ import arrow
 import os # to load the api keys from my env file
 from dotenv import load_dotenv # to load the api keys from my env file
 
-if os.getenv("GITHUB_ACTIONS") is None: # Load environment variables from .env only if running locally
+if os.getenv("GITHUB_ACTIONS") is None and os.getenv("RAILWAY_ENVIRONMENT") is None: # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
 STORM_API = os.getenv("STORM_API")  # Now, API_KEY contains "your_secret_key_here"

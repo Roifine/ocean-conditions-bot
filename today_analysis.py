@@ -8,11 +8,8 @@ from dotenv import load_dotenv
 import math
 import requests
 
-if os.getenv("GITHUB_ACTIONS") is None:
+if os.getenv("GITHUB_ACTIONS") is None and os.getenv("RAILWAY_ENVIRONMENT") is None:
     load_dotenv("api_keys.env")
-
-deepseek_api = os.getenv("DEEPSEEK_API")
-client = OpenAI(api_key=deepseek_api, base_url="https://api.deepseek.com")
 
 def get_wind_description(wind_speed_ms, wind_direction_deg):
     """Convert wind data to descriptive text"""
@@ -132,25 +129,46 @@ def fetch_fresh_storm_glass_data():
     return wave_response.json(), wind_response.json(), tide_response.json()
 
 def get_today_hourly_forecast():
-    """Extract today's hourly forecast data from fresh Storm Glass API data"""
+    """Extract today's hourly forecast data with intelligent caching"""
     try:
-        # Try to fetch fresh data from API
+        # Check if we have fresh cached data first (less than 2 hours old)
+        cache_is_fresh = False
         try:
-            wave_data, wind_data, tide_data = fetch_fresh_storm_glass_data()
-            # Check if API returned valid data
-            if not wave_data.get('hours') or not wind_data.get('hours'):
-                raise ValueError("API returned empty data")
-            print("Using fresh API data")
-        except Exception as api_error:
-            print(f"API fetch failed ({api_error}), falling back to JSON files")
-            # Fallback to existing JSON files
             with open('wave_forecast.json', 'r') as f:
                 wave_data = json.load(f)
+            
+            if 'last_updated' in wave_data:
+                from datetime import datetime
+                last_update = datetime.fromisoformat(wave_data['last_updated'])
+                cache_age_hours = (datetime.now() - last_update).total_seconds() / 3600
+                
+                if cache_age_hours < 2:  # Cache is less than 2 hours old
+                    cache_is_fresh = True
+                    print(f"Using cached data (age: {cache_age_hours:.1f}h)")
+        except:
+            pass
+        
+        # Only fetch fresh data if cache is stale or missing
+        if not cache_is_fresh:
+            try:
+                wave_data, wind_data, tide_data = fetch_fresh_storm_glass_data()
+                # Check if API returned valid data
+                if not wave_data.get('hours') or not wind_data.get('hours'):
+                    raise ValueError("API returned empty data")
+                print("Using fresh API data")
+            except Exception as api_error:
+                print(f"API fetch failed ({api_error}), falling back to JSON files")
+                # Fallback to existing JSON files
+                with open('wave_forecast.json', 'r') as f:
+                    wave_data = json.load(f)
+                print("Using cached JSON data")
+        
+        # Load remaining data if not already loaded
+        if cache_is_fresh or 'wind_data' not in locals():
             with open('wind_forecast.json', 'r') as f:
                 wind_data = json.load(f)
             with open('tide_extreme_data.json', 'r') as f:
                 tide_data = json.load(f)
-            print("Using cached JSON data")
         
         # Sydney timezone (UTC+10 standard time in September)
         sydney_tz = timezone(timedelta(hours=10))
@@ -287,6 +305,13 @@ Maroubra Beach:
 
 Keep it practical, concise, and based on the actual hourly data provided.
 """
+        
+        # Initialize DeepSeek client
+        deepseek_api = os.getenv("DEEPSEEK_API")
+        if not deepseek_api:
+            raise ValueError("DEEPSEEK_API environment variable not found")
+        
+        client = OpenAI(api_key=deepseek_api, base_url="https://api.deepseek.com")
         
         # Call DeepSeek
         response = client.chat.completions.create(
