@@ -45,8 +45,12 @@ Response Format (Max 10 lines, Telegram-friendly, do not use * to bold):
 
 def run():
     # Get forecasts when function is called, not at import time
-    bondi_forecast = get_forecast("read_and_print_bondi.py")
-    maroubra_forecast = get_forecast("read_and_print_maroubra.py")
+    try:
+        bondi_forecast = get_forecast("read_and_print_bondi.py")
+        maroubra_forecast = get_forecast("read_and_print_maroubra.py")
+    except Exception as e:
+        print(f"Error running forecast scripts: {e}")
+        return "Sorry, forecast data is temporarily unavailable. Please try again later."
 
     # Combine forecasts into a single prompt
     user_input = f"""
