@@ -8,12 +8,19 @@ if os.getenv("GITHUB_ACTIONS") is None and os.getenv("RAILWAY_ENVIRONMENT") is N
 
 # Step 1: Run your existing scripts and capture their output
 def get_forecast(script_name):
+    import sys
     result = subprocess.run(
-        ["python", script_name], 
+        [sys.executable, script_name], 
         capture_output=True, 
         text=True,
-        check=True
+        check=False  # Don't raise exception, let us handle it
     )
+    
+    if result.returncode != 0:
+        print(f"Script {script_name} failed with return code {result.returncode}")
+        print(f"STDOUT: {result.stdout}")
+        print(f"STDERR: {result.stderr}")
+        raise Exception(f"Script {script_name} failed: {result.stderr}")
 
     return result.stdout
 
