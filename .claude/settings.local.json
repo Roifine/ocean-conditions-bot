@@ -15,7 +15,8 @@
       "Read(//Users/roifine/My python projects/Best Surf app /.github/workflows/**)",
       "Bash(DEEPSEEK_API=\"\" python -c \"import today_analysis; print(''Import works without DEEPSEEK_API'')\")",
       "Bash(GITHUB_ACTIONS=1 STORM_API=\"\" python fetch_data.py)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

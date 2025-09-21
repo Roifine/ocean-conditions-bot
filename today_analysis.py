@@ -142,7 +142,7 @@ def get_today_hourly_forecast():
                 last_update = datetime.fromisoformat(wave_data['last_updated'])
                 cache_age_hours = (datetime.now() - last_update).total_seconds() / 3600
                 
-                if cache_age_hours < 2:  # Cache is less than 2 hours old
+                if cache_age_hours < 24:  # Cache is less than 24 hours old
                     cache_is_fresh = True
                     print(f"Using cached data (age: {cache_age_hours:.1f}h)")
         except:
@@ -291,7 +291,7 @@ The forecast data contains hourly conditions throughout the day. Analyze ALL hou
 
 Format your response exactly like this (use plain text, no ** formatting):
 
-TODAY'S SURF OVERVIEW
+TODAY'S SURF OVERVIEW - [Day, Month Date]
 
 Bondi Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
