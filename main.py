@@ -124,8 +124,10 @@ class MyBot:
         user = msg.from_user  # Get user info
         print(f"{user.name} wrote: {msg.text}")  # Print user and their message
 
-        # Send a reply to the user (for example, after receiving their message)
-        await self.send_text(user.id, f"Oi, {user.name}! Hit the blue menu button below to see what's on offer 🏄‍♂️🤙")
+        # Only respond to non-command messages
+        if not msg.text.startswith('/'):
+            # Send a reply to the user (for example, after receiving their message)
+            await self.send_text(user.id, f"Oi, {user.name}! Hit the blue menu button below to see what's on offer 🏄‍♂️🤙")
     
     async def send_text(self, chat_id: int, text: str):
         """Send a message to a specific user."""
