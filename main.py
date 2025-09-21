@@ -27,7 +27,7 @@ is_production = any([
 if not is_production:  # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
-telegram_api = os.getenv("TELEGRAM_API")  # Now, API_KEY contains "your_secret_key_here"
+telegram_api = os.getenv("TELEGRAM_API") or os.getenv("telegram_api")  # Check both uppercase and lowercase
 
 # Debug environment variables
 print(f"Environment check:")

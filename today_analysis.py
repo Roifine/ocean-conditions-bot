@@ -88,7 +88,7 @@ def fetch_fresh_storm_glass_data():
     """Fetch fresh data from Storm Glass API"""
     import requests
     
-    storm_api = os.getenv("STORM_API")
+    storm_api = os.getenv("STORM_API") or os.getenv("storm_api")
     if not storm_api:
         raise ValueError("STORM_API not found in environment variables")
     
@@ -309,7 +309,7 @@ Keep it concise and practical.
 """
         
         # Initialize DeepSeek client
-        deepseek_api = os.getenv("DEEPSEEK_API")
+        deepseek_api = os.getenv("DEEPSEEK_API") or os.getenv("deepseek_api")
         if not deepseek_api:
             raise ValueError("DEEPSEEK_API environment variable not found")
         

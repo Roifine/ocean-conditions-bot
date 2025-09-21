@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 if os.getenv("GITHUB_ACTIONS") is None:
     load_dotenv("api_keys.env")
 
-telegram_api = os.getenv("TELEGRAM_API")
+telegram_api = os.getenv("TELEGRAM_API") or os.getenv("telegram_api")
 
 class TestBot:
     def __init__(self, token):

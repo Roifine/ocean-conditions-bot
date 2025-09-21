@@ -68,7 +68,7 @@ def run():
 {maroubra_forecast}
 """
 
-    deepseek_api = os.getenv("DEEPSEEK_API")
+    deepseek_api = os.getenv("DEEPSEEK_API") or os.getenv("deepseek_api")
     if not deepseek_api:
         raise ValueError("DEEPSEEK_API environment variable not found")
     
