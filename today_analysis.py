@@ -287,7 +287,9 @@ def generate_today_analysis():
         system_prompt = """
 You are a professional surf coach analyzing today's surf conditions in Sydney.
 
-The forecast data contains hourly conditions throughout the day. Analyze ALL hours to find the best times.
+Beach-specific tide preferences:
+- Bondi Beach: Works best on mid to high tides or high to mid tides
+- Maroubra Beach: Good on low to mid or mid to low tides on small days (under 4ft), but all tides work on big days (4ft+)
 
 Format your response exactly like this (use plain text, no ** formatting):
 
@@ -295,15 +297,15 @@ TODAY'S SURF OVERVIEW - [Day, Month Date]
 
 Bondi Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [list 2-3 specific time windows when conditions are optimal, e.g. "6-8am, 2-4pm"]
-- Summary: [2 sentences explaining conditions throughout the day and why these times are best]
+- Best Times: [1-2 time windows, e.g. "6-8am (offshore winds), 2-4pm (bigger waves)"]
+- Summary: [1 sentence overview]
 
 Maroubra Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [list 2-3 specific time windows when conditions are optimal]
-- Summary: [2 sentences explaining conditions throughout the day and why these times are best]
+- Best Times: [1-2 time windows with 2-3 word reasons]
+- Summary: [1 sentence overview]
 
-Keep it practical, concise, and based on the actual hourly data provided.
+Keep it concise and practical.
 """
         
         # Initialize DeepSeek client
