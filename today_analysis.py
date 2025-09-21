@@ -291,18 +291,20 @@ Beach-specific tide preferences:
 - Bondi Beach: Works best on mid to high tides or high to mid tides
 - Maroubra Beach: Good on low to mid or mid to low tides on small days (under 4ft), but all tides work on big days (4ft+)
 
+Wind direction changes: If offshore winds change to onshore (or vice versa) during the day, mention this in the time windows to help surfers plan around the wind shift.
+
 Format your response exactly like this (use plain text, no ** formatting):
 
 TODAY'S SURF OVERVIEW - [Day, Month Date]
 
 Bondi Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [1-2 time windows, e.g. "6-8am (offshore winds), 2-4pm (bigger waves)"]
+- Best Times: [1-2 time windows, e.g. "6-8am (offshore winds), 2-4pm (winds turn onshore)"]
 - Summary: [1 sentence overview]
 
 Maroubra Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [1-2 time windows with 2-3 word reasons]
+- Best Times: [1-2 time windows with 2-3 word reasons, noting wind changes]
 - Summary: [1 sentence overview]
 
 Keep it concise and practical.
@@ -352,6 +354,23 @@ def get_cached_today_analysis():
             
         # Check if cache is for today
         if cached["date"] == date.today().isoformat():
+            # Also check if Storm Glass data is newer than our analysis
+            try:
+                with open("wave_forecast.json", "r") as f:
+                    wave_data = json.load(f)
+                
+                if "last_updated" in wave_data:
+                    wave_updated = datetime.fromisoformat(wave_data["last_updated"])
+                    analysis_generated = datetime.fromisoformat(cached["generated_at"])
+                    
+                    # If wave data is newer than analysis, regenerate
+                    if wave_updated > analysis_generated:
+                        print("Storm Glass data updated, regenerating analysis...")
+                        return generate_today_analysis()
+                        
+            except (FileNotFoundError, KeyError):
+                pass
+                
             return cached
             
     except FileNotFoundError:
