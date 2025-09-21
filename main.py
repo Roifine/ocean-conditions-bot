@@ -16,10 +16,33 @@ import today_analysis
 from flask import Flask, jsonify
 import threading
 
-if os.getenv("GITHUB_ACTIONS") is None and os.getenv("RAILWAY_ENVIRONMENT") is None: # Load environment variables from .env only if running locally
+# Check if running in production (Railway sets these)
+is_production = any([
+    os.getenv("GITHUB_ACTIONS"),
+    os.getenv("RAILWAY_ENVIRONMENT"), 
+    os.getenv("RAILWAY_PROJECT_ID"),
+    os.getenv("PORT")  # Railway typically sets PORT
+])
+
+if not is_production:  # Load environment variables from .env only if running locally
     load_dotenv("api_keys.env")
 
 telegram_api = os.getenv("TELEGRAM_API")  # Now, API_KEY contains "your_secret_key_here"
+
+# Debug environment variables
+print(f"Environment check:")
+print(f"is_production: {is_production}")
+print(f"GITHUB_ACTIONS: {os.getenv('GITHUB_ACTIONS')}")
+print(f"RAILWAY_ENVIRONMENT: {os.getenv('RAILWAY_ENVIRONMENT')}")
+print(f"RAILWAY_PROJECT_ID: {os.getenv('RAILWAY_PROJECT_ID')}")
+print(f"PORT: {os.getenv('PORT')}")
+print(f"TELEGRAM_API loaded: {bool(telegram_api)}")
+if telegram_api:
+    print(f"TELEGRAM_API starts with: {telegram_api[:10]}...")
+print(f"Available env vars: {[k for k in os.environ.keys() if not k.startswith('_')]}")
+
+if not telegram_api:
+    raise ValueError("TELEGRAM_API environment variable not found! Check Railway environment variables.")
 
 
 class MyBot:
