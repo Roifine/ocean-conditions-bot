@@ -1,6 +1,7 @@
 from telegram import Update, Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, CallbackQueryHandler
 import subprocess  # Added to run the external script
+import sys
 import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -25,12 +26,7 @@ class MyBot:
     def __init__(self, token):
         self.token = token
         self.bot = Bot(token=token)
-
-    def run(self):
-        # Register handlers and start the bot
-        self.application.add_handler(CommandHandler("start", self.start))
-        self.application.add_handler(CommandHandler("surf", self.surf_report))  # Added surf command
-        self.application.run_polling()
+        self.application = Application.builder().token(token).build()
 
     def get_bot_username(self):
         # You can define a bot username if you wish, or return a placeholder.
@@ -66,8 +62,11 @@ class MyBot:
         script_file = f"read_and_print_{beach}.py"  # Example: "bondi_forecast.py"
 
         try:
-            result = subprocess.run(["python", script_file], capture_output=True, text=True)
+            import sys
+            result = subprocess.run([sys.executable, script_file], capture_output=True, text=True, timeout=30)
             surf_data = result.stdout.strip() if result.returncode == 0 else f"Error fetching data for {beach.capitalize()}."
+        except subprocess.TimeoutExpired:
+            surf_data = "Request timed out. Please try again."
         except Exception as e:
             surf_data = f"Error: {e}"
 
@@ -75,9 +74,13 @@ class MyBot:
 
     async def best_waves(self, update: Update, context: CallbackContext):
         """Fetches the best surf days from an external script and sends the result to the user."""
-        output = deep_seek.run()
-        print(f"User selected best")
-        await update.message.reply_text(f"🏄‍♂️ Best Days (8:00 AM):\n\n{output}")
+        try:
+            output = deep_seek.run()
+            print(f"User selected best")
+            await update.message.reply_text(f"🏄‍♂️ Best Days (8:00 AM):\n\n{output}")
+        except Exception as e:
+            print(f"Error in best_waves: {e}")
+            await update.message.reply_text(f"Sorry, couldn't get best waves forecast: {e}")
 
     async def today_surf(self, update: Update, context: CallbackContext):
         """Fetches today's AI surf analysis and sends it to the user."""
@@ -115,22 +118,21 @@ def run_flask():
     app.run(debug=False, host="0.0.0.0", port=port)
     
 if __name__ == '__main__':
-    threading.Thread(target=run_flask).start()
-
-    bot = MyBot(token=telegram_api)  # Initialize the bot
-
-    # Create an instance of the Application with your bot's token
-    application = Application.builder().token(bot.token).build()
-
-    # Register the /start command handler
-    application.add_handler(CommandHandler("start", bot.start))  # Notice: use 'bot.start' here
-    application.add_handler(CommandHandler("forecast", bot.surf))  # Handles /surf 
-    application.add_handler(CallbackQueryHandler(bot.surf))
-    application.add_handler(CommandHandler("best", bot.best_waves))
-    application.add_handler(CommandHandler("today", bot.today_surf))
-
-    # Register the message handler for all text messages
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
-
-    # Run the bot using polling
-    application.run_polling()
+    # Start Flask in a separate thread
+    flask_thread = threading.Thread(target=run_flask, daemon=True)
+    flask_thread.start()
+    
+    # Initialize the bot
+    bot = MyBot(token=telegram_api)
+    
+    # Register handlers
+    bot.application.add_handler(CommandHandler("start", bot.start))
+    bot.application.add_handler(CommandHandler("forecast", bot.surf))
+    bot.application.add_handler(CallbackQueryHandler(bot.surf))
+    bot.application.add_handler(CommandHandler("best", bot.best_waves))
+    bot.application.add_handler(CommandHandler("today", bot.today_surf))
+    bot.application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
+    
+    print("Bot starting...")
+    # Run the bot
+    bot.application.run_polling(drop_pending_updates=True)
