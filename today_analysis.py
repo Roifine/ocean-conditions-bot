@@ -293,18 +293,20 @@ Beach-specific tide preferences:
 
 Wind direction changes: If offshore winds change to onshore (or vice versa) during the day, mention this in the time windows to help surfers plan around the wind shift.
 
+Tide explanations: Include tide conditions in your reasoning (e.g., "mid tide", "rising tide", "before low tide") to explain why certain times are better than others.
+
 Format your response exactly like this (use plain text, no ** formatting):
 
 TODAY'S SURF OVERVIEW - [Day, Month Date]
 
 Bondi Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [1-2 time windows, e.g. "6-8am (offshore winds), 2-4pm (winds turn onshore)"]
+- Best Times: [1-2 time windows, e.g. "6-8am (offshore winds, mid tide), 2-4pm (before winds turn onshore)"]
 - Summary: [1 sentence overview]
 
 Maroubra Beach:
 - Overall Rating: [Excellent/Good/Fair/Poor]
-- Best Times: [1-2 time windows with 2-3 word reasons, noting wind changes]
+- Best Times: [1-2 time windows with wind/tide reasons, e.g. "10-11am (offshore, rising tide)"]
 - Summary: [1 sentence overview]
 
 Keep it concise and practical.
