@@ -12,6 +12,7 @@ from dotenv import load_dotenv # to load the api keys from my env file
 
 import deep_seek
 import today_analysis
+import tomorrow_analysis
 
 from flask import Flask, jsonify
 import threading
@@ -117,6 +118,18 @@ class MyBot:
             print(f"Error in today_surf: {e}")
             await update.message.reply_text(f"Sorry, couldn't get today's analysis: {e}")
 
+    async def tomorrow_surf(self, update: Update, context: CallbackContext):
+        """Fetches tomorrow's AI surf analysis and sends it to the user."""
+        try:
+            print(f"User requested tomorrow's analysis - starting...")
+            analysis = tomorrow_analysis.get_cached_tomorrow_analysis()
+            print(f"Analysis retrieved successfully")
+            await update.message.reply_text(f"🏄‍♂️ {analysis['analysis']}")
+            print(f"Message sent to user")
+        except Exception as e:
+            print(f"Error in tomorrow_surf: {e}")
+            await update.message.reply_text(f"Sorry, couldn't get tomorrow's analysis: {e}")
+
 
    
     async def on_update_received(self, update: Update, context: CallbackContext):
@@ -156,6 +169,7 @@ if __name__ == '__main__':
     bot.application.add_handler(CallbackQueryHandler(bot.surf))
     bot.application.add_handler(CommandHandler("best", bot.best_waves))
     bot.application.add_handler(CommandHandler("today", bot.today_surf))
+    bot.application.add_handler(CommandHandler("tomorrow", bot.tomorrow_surf))
     bot.application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, bot.on_update_received))
     
     print("Bot starting...")

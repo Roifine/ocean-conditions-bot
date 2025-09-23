@@ -16,7 +16,8 @@
       "Bash(DEEPSEEK_API=\"\" python -c \"import today_analysis; print(''Import works without DEEPSEEK_API'')\")",
       "Bash(GITHUB_ACTIONS=1 STORM_API=\"\" python fetch_data.py)",
       "Bash(find:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(DEEPSEEK_API=\"\" python -c \"import tomorrow_analysis; print(''Import works without DEEPSEEK_API'')\")"
     ],
     "deny": [],
     "ask": []
