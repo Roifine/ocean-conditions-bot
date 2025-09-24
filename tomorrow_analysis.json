@@ -1,118 +1,166 @@
 {
-    "date": "2025-09-24",
-    "generated_at": "2025-09-23T15:01:12.365740",
-    "analysis": "TOMORROW'S SURF OVERVIEW - Wednesday, September 24\n\nBondi Beach:\n- Overall Rating: Fair\n- Best Times: 10am-12pm (offshore winds, falling tide from mid to low)\n- Summary: Offshore winds and solid swell in the morning offer a decent session before conditions deteriorate with onshore winds and an unfavorable low tide in the afternoon.\n\nMaroubra Beach:\n- Overall Rating: Good\n- Best Times: All day (solid 4ft+ swell works on all tides)\n- Summary: The large swell size means all tides will work, with the best conditions occurring during the morning's offshore winds before they turn cross-shore.",
+    "date": "2025-09-25",
+    "generated_at": "2025-09-24T11:03:06.957638",
+    "analysis": "TOMORROW'S SURF OVERVIEW - Thursday, September 25\n\nBondi Beach:\n- Overall Rating: Fair\n- Best Times: 6-10am (offshore winds, low to mid rising tide)\n- Summary: Large swell all day is a bit too big for ideal conditions at Bondi, but the morning offers the best combination of offshore winds and a rising tide.\n\nMaroubra Beach:\n- Overall Rating: Good\n- Best Times: All day (large 4ft+ swell works on all tides, strong offshore/cross-shore winds)\n- Summary: The large swell size makes all tides workable, with consistent offshore winds providing clean conditions for experienced surfers.",
     "raw_forecast": {
         "bondi": [
             {
+                "time": "06:00 AM",
+                "wave_height": "7.3ft",
+                "wind": "18km/h WNW (moderate cross-shore to offshore)",
+                "tide": "0.1m rising"
+            },
+            {
+                "time": "07:00 AM",
+                "wave_height": "7.1ft",
+                "wind": "15km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.0m rising"
+            },
+            {
+                "time": "08:00 AM",
+                "wave_height": "6.9ft",
+                "wind": "17km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.2m rising"
+            },
+            {
+                "time": "09:00 AM",
+                "wave_height": "6.6ft",
+                "wind": "18km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.4m rising"
+            },
+            {
                 "time": "10:00 AM",
-                "wave_height": "4.6ft",
-                "wind": "14km/h WNW (moderate cross-shore to offshore)",
-                "tide": "0.5m falling"
+                "wave_height": "6.4ft",
+                "wind": "20km/h NW (strong offshore)",
+                "tide": "0.6m falling"
             },
             {
                 "time": "11:00 AM",
-                "wave_height": "4.8ft",
-                "wind": "16km/h NNW (moderate offshore)",
-                "tide": "0.3m falling"
-            },
-            {
-                "time": "12:00 PM",
-                "wave_height": "4.9ft",
-                "wind": "17km/h NE (moderate offshore)",
-                "tide": "0.1m falling"
-            },
-            {
-                "time": "01:00 PM",
-                "wave_height": "5.0ft",
-                "wind": "18km/h E (moderate cross-shore to onshore)",
-                "tide": "0.1m falling"
-            },
-            {
-                "time": "02:00 PM",
-                "wave_height": "5.0ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
-                "tide": "0.3m falling"
-            },
-            {
-                "time": "03:00 PM",
-                "wave_height": "5.1ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
+                "wave_height": "6.3ft",
+                "wind": "22km/h NW (strong cross-shore to offshore)",
                 "tide": "0.4m falling"
             },
             {
+                "time": "12:00 PM",
+                "wave_height": "6.3ft",
+                "wind": "24km/h WNW (strong cross-shore to offshore)",
+                "tide": "0.2m falling"
+            },
+            {
+                "time": "01:00 PM",
+                "wave_height": "6.2ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.0m falling"
+            },
+            {
+                "time": "02:00 PM",
+                "wave_height": "6.2ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.1m falling"
+            },
+            {
+                "time": "03:00 PM",
+                "wave_height": "6.1ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.3m falling"
+            },
+            {
                 "time": "04:00 PM",
-                "wave_height": "5.1ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
-                "tide": "0.5m rising"
+                "wave_height": "6.1ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
+                "tide": "0.5m falling"
             },
             {
                 "time": "05:00 PM",
-                "wave_height": "5.2ft",
-                "wind": "16km/h ESE (moderate cross-shore to onshore)",
+                "wave_height": "6.0ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
                 "tide": "0.4m rising"
             },
             {
                 "time": "06:00 PM",
-                "wave_height": "5.3ft",
-                "wind": "14km/h SE (moderate cross-shore to onshore)",
-                "tide": "0.2m rising"
+                "wave_height": "5.8ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
+                "tide": "0.3m rising"
             }
         ],
         "maroubra": [
             {
+                "time": "06:00 AM",
+                "wave_height": "7.3ft",
+                "wind": "18km/h WNW (moderate cross-shore to offshore)",
+                "tide": "0.1m rising"
+            },
+            {
+                "time": "07:00 AM",
+                "wave_height": "7.1ft",
+                "wind": "15km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.0m rising"
+            },
+            {
+                "time": "08:00 AM",
+                "wave_height": "6.9ft",
+                "wind": "17km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.2m rising"
+            },
+            {
+                "time": "09:00 AM",
+                "wave_height": "6.6ft",
+                "wind": "18km/h NW (moderate cross-shore to offshore)",
+                "tide": "0.4m rising"
+            },
+            {
                 "time": "10:00 AM",
-                "wave_height": "4.6ft",
-                "wind": "14km/h WNW (moderate cross-shore to offshore)",
-                "tide": "0.5m falling"
+                "wave_height": "6.4ft",
+                "wind": "20km/h NW (strong offshore)",
+                "tide": "0.6m falling"
             },
             {
                 "time": "11:00 AM",
-                "wave_height": "4.8ft",
-                "wind": "16km/h NNW (moderate offshore)",
-                "tide": "0.3m falling"
-            },
-            {
-                "time": "12:00 PM",
-                "wave_height": "4.9ft",
-                "wind": "17km/h NE (moderate offshore)",
-                "tide": "0.1m falling"
-            },
-            {
-                "time": "01:00 PM",
-                "wave_height": "5.0ft",
-                "wind": "18km/h E (moderate cross-shore to onshore)",
-                "tide": "0.1m falling"
-            },
-            {
-                "time": "02:00 PM",
-                "wave_height": "5.0ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
-                "tide": "0.3m falling"
-            },
-            {
-                "time": "03:00 PM",
-                "wave_height": "5.1ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
+                "wave_height": "6.3ft",
+                "wind": "22km/h NW (strong cross-shore to offshore)",
                 "tide": "0.4m falling"
             },
             {
+                "time": "12:00 PM",
+                "wave_height": "6.3ft",
+                "wind": "24km/h WNW (strong cross-shore to offshore)",
+                "tide": "0.2m falling"
+            },
+            {
+                "time": "01:00 PM",
+                "wave_height": "6.2ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.0m falling"
+            },
+            {
+                "time": "02:00 PM",
+                "wave_height": "6.2ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.1m falling"
+            },
+            {
+                "time": "03:00 PM",
+                "wave_height": "6.1ft",
+                "wind": "26km/h W (strong cross-shore to offshore)",
+                "tide": "0.3m falling"
+            },
+            {
                 "time": "04:00 PM",
-                "wave_height": "5.1ft",
-                "wind": "18km/h ESE (moderate cross-shore to onshore)",
-                "tide": "0.5m rising"
+                "wave_height": "6.1ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
+                "tide": "0.5m falling"
             },
             {
                 "time": "05:00 PM",
-                "wave_height": "5.2ft",
-                "wind": "16km/h ESE (moderate cross-shore to onshore)",
+                "wave_height": "6.0ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
                 "tide": "0.4m rising"
             },
             {
                 "time": "06:00 PM",
-                "wave_height": "5.3ft",
-                "wind": "14km/h SE (moderate cross-shore to onshore)",
-                "tide": "0.2m rising"
+                "wave_height": "5.8ft",
+                "wind": "25km/h W (strong cross-shore to offshore)",
+                "tide": "0.3m rising"
             }
         ]
     }
