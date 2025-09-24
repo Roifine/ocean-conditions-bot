@@ -172,13 +172,13 @@ def get_tomorrow_hourly_forecast():
         sydney_tz = timezone(timedelta(hours=10))
         tomorrow = date.today() + timedelta(days=1)
         
-        # Create time range for tomorrow 10 AM - 6 PM Sydney time (data available from 10am)
-        start_time = datetime.combine(tomorrow, datetime.min.time().replace(hour=10)).replace(tzinfo=sydney_tz)
+        # Create time range for tomorrow 6 AM - 6 PM Sydney time
+        start_time = datetime.combine(tomorrow, datetime.min.time().replace(hour=6)).replace(tzinfo=sydney_tz)
         end_time = datetime.combine(tomorrow, datetime.min.time().replace(hour=18)).replace(tzinfo=sydney_tz)
         
         hourly_data = []
         
-        # Generate hourly data from 10 AM to 6 PM
+        # Generate hourly data from 6 AM to 6 PM
         current_time = start_time
         while current_time <= end_time:
             # Convert to UTC for matching with Storm Glass data
@@ -328,10 +328,11 @@ Keep it concise and practical.
             stream=False
         )
         
-        # Create analysis object
-        tomorrow_date = date.today() + timedelta(days=1)
+        # Create analysis object (using Sydney timezone for date)
+        sydney_tz = timezone(timedelta(hours=10))
+        sydney_tomorrow = (datetime.now(sydney_tz) + timedelta(days=1)).date()
         analysis = {
-            "date": tomorrow_date.isoformat(),
+            "date": sydney_tomorrow.isoformat(),
             "generated_at": datetime.now().isoformat(),
             "analysis": response.choices[0].message.content,
             "raw_forecast": forecast_data
@@ -355,9 +356,10 @@ def get_cached_tomorrow_analysis():
         with open("tomorrow_analysis.json", "r") as f:
             cached = json.load(f)
             
-        # Check if cache is for tomorrow
-        tomorrow_date = date.today() + timedelta(days=1)
-        if cached["date"] == tomorrow_date.isoformat():
+        # Check if cache is for tomorrow (using Sydney timezone)
+        sydney_tz = timezone(timedelta(hours=10))
+        sydney_tomorrow = (datetime.now(sydney_tz) + timedelta(days=1)).date()
+        if cached["date"] == sydney_tomorrow.isoformat():
             # Also check if Storm Glass data is newer than our analysis
             try:
                 with open("wave_forecast.json", "r") as f:

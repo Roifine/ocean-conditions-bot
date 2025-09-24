@@ -174,13 +174,13 @@ def get_today_hourly_forecast():
         sydney_tz = timezone(timedelta(hours=10))
         today = date.today()
         
-        # Create time range for today 10 AM - 6 PM Sydney time (data available from 10am)
-        start_time = datetime.combine(today, datetime.min.time().replace(hour=10)).replace(tzinfo=sydney_tz)
+        # Create time range for today 6 AM - 6 PM Sydney time
+        start_time = datetime.combine(today, datetime.min.time().replace(hour=6)).replace(tzinfo=sydney_tz)
         end_time = datetime.combine(today, datetime.min.time().replace(hour=18)).replace(tzinfo=sydney_tz)
         
         hourly_data = []
         
-        # Generate hourly data from 10 AM to 6 PM
+        # Generate hourly data from 6 AM to 6 PM
         current_time = start_time
         while current_time <= end_time:
             # Convert to UTC for matching with Storm Glass data
@@ -329,9 +329,11 @@ Keep it concise and practical.
             stream=False
         )
         
-        # Create analysis object
+        # Create analysis object (using Sydney timezone for date)
+        sydney_tz = timezone(timedelta(hours=10))
+        sydney_today = datetime.now(sydney_tz).date()
         analysis = {
-            "date": date.today().isoformat(),
+            "date": sydney_today.isoformat(),
             "generated_at": datetime.now().isoformat(),
             "analysis": response.choices[0].message.content,
             "raw_forecast": forecast_data
@@ -354,8 +356,10 @@ def get_cached_today_analysis():
         with open("today_analysis.json", "r") as f:
             cached = json.load(f)
             
-        # Check if cache is for today
-        if cached["date"] == date.today().isoformat():
+        # Check if cache is for today (using Sydney timezone)
+        sydney_tz = timezone(timedelta(hours=10))
+        sydney_today = datetime.now(sydney_tz).date()
+        if cached["date"] == sydney_today.isoformat():
             # Also check if Storm Glass data is newer than our analysis
             try:
                 with open("wave_forecast.json", "r") as f:
