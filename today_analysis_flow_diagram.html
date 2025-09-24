@@ -174,8 +174,10 @@
         <h1>🏄‍♂️ Today Analysis Logic Flow Diagram</h1>
         
         <div class="bug-analysis">
-            <h3>🔍 Analysis Result: NO BUG FOUND</h3>
-            <p><strong>The system is working correctly!</strong> The analysis shows today's date (2025-09-24) and was generated this morning. The perceived "yesterday" issue is likely due to content similarity or misunderstanding the 24-hour cache design.</p>
+            <h3>🔧 BUGS FOUND & FIXED</h3>
+            <p><strong>✅ Timezone Bug Fixed:</strong> Date comparison now uses Sydney timezone instead of server timezone</p>
+            <p><strong>✅ Time Window Updated:</strong> Extended coverage from 10 AM-6 PM to 6 AM-6 PM Sydney time</p>
+            <p><strong>Status:</strong> System now working correctly with proper timezone handling!</p>
         </div>
 
         <div class="layer">
@@ -205,14 +207,23 @@
             </div>
             
             <div class="decision">
-                Is cached["date"] == date.today().isoformat()?
+                Is cached["date"] == sydney_today.isoformat()?
             </div>
             
             <div class="code-snippet">
-# Current State Analysis:
-cached["date"] = "2025-09-24"
-date.today().isoformat() = "2025-09-24"
-Result: ✅ MATCH - Cache is for today
+# FIXED: Now uses Sydney timezone for date comparison
+sydney_tz = timezone(timedelta(hours=10))
+sydney_today = datetime.now(sydney_tz).date()
+
+# Before (BUGGY):
+# if cached["date"] == date.today().isoformat():  # Server timezone!
+
+# After (FIXED):
+# if cached["date"] == sydney_today.isoformat():  # Sydney timezone!
+
+cached["date"] = "2025-09-24" 
+sydney_today.isoformat() = "2025-09-24"
+Result: ✅ MATCH - Cache is for today (Sydney time)
             </div>
         </div>
 
@@ -312,29 +323,34 @@ Result: ❌ Analysis is NEWER - Use cached analysis
             <div class="timeline">
                 <div class="time-box">
                     <strong>Sydney Time</strong><br>
-                    10:00 AM<br>
+                    6:00 AM<br>
                     to 6:00 PM
                 </div>
                 <div class="time-box">
                     <strong>UTC Time</strong><br>
-                    00:00:00<br>
-                    to 08:00:00
+                    20:00 (prev day)<br>
+                    to 08:00
                 </div>
                 <div class="time-box">
                     <strong>Data Points</strong><br>
-                    9 Hours<br>
+                    13 Hours<br>
                     ✅ Available
                 </div>
             </div>
             
             <div class="code-snippet">
-# Time conversion logic:
+# UPDATED: Extended time window (6 AM - 6 PM Sydney)
 sydney_tz = timezone(timedelta(hours=10))  # UTC+10
-start_time = datetime.combine(today, time(10,0)).replace(tzinfo=sydney_tz)
-# 2025-09-24 10:00 Sydney → 2025-09-24 00:00 UTC
+
+# Before (OLD):
+# start_time = datetime.combine(today, time(10,0)).replace(tzinfo=sydney_tz)
+
+# After (NEW):
+start_time = datetime.combine(today, time(6,0)).replace(tzinfo=sydney_tz)
+# 2025-09-24 06:00 Sydney → 2025-09-23 20:00 UTC
 
 # Data matching:
-for each hour from 10 AM to 6 PM Sydney:
+for each hour from 6 AM to 6 PM Sydney (13 hours):
     utc_time = current_time.astimezone(timezone.utc)
     time_str = utc_time.strftime('%Y-%m-%dT%H:%M:%S+00:00')
     find matching data in JSON files
@@ -356,12 +372,14 @@ for each hour from 10 AM to 6 PM Sydney:
 **Today's Surf Forecast - Tuesday, September 24**
 
 **Bondi Beach:**
-10:00 AM - Wave: 4.7ft, Wind: 22km/h NW (strong cross-shore to offshore), Tide: 0.5m falling
-11:00 AM - Wave: 4.7ft, Wind: 16km/h NW (moderate offshore), Tide: 0.3m falling
+06:00 AM - Wave: 5.0ft, Wind: 25km/h WNW (strong cross-shore to offshore), Tide: 0.7m falling
+07:00 AM - Wave: 4.9ft, Wind: 27km/h WNW (strong cross-shore to offshore), Tide: 0.6m falling
+08:00 AM - Wave: 4.8ft, Wind: 25km/h WNW (strong cross-shore to offshore), Tide: 0.4m falling
 ...
+06:00 PM - Wave: 4.8ft, Wind: 10km/h SSE (moderate onshore), Tide: 0.2m rising
 
 **Maroubra Beach:**
-[Same data structure]
+[Same data structure - now 13 hours instead of 9]
                 </div>
             </div>
             
@@ -376,25 +394,33 @@ for each hour from 10 AM to 6 PM Sydney:
             <h3>6. Current System Status</h3>
             
             <div class="data-flow">
-                <h4>Live Status Check:</h4>
+                <h4>Live Status Check (After Fixes):</h4>
                 <ul>
-                    <li><span class="status-good">✅ Analysis Date:</span> 2025-09-24 (matches today)</li>
-                    <li><span class="status-good">✅ Generated Time:</span> 09:49:07 (10 minutes ago)</li>
-                    <li><span class="status-good">✅ Wave Data Age:</span> 4.7 hours (fresh, < 24h)</li>
-                    <li><span class="status-good">✅ Cache Logic:</span> All conditions satisfied</li>
-                    <li><span class="status-good">✅ Data Availability:</span> All timestamps found</li>
-                    <li><span class="status-good">✅ Time Zone Conversion:</span> Working correctly</li>
+                    <li><span class="status-good">✅ Analysis Date:</span> 2025-09-24 (matches Sydney today)</li>
+                    <li><span class="status-good">✅ Timezone Fix:</span> Uses Sydney timezone for date comparison</li>
+                    <li><span class="status-good">✅ Time Window:</span> Extended to 6 AM - 6 PM (13 hours)</li>
+                    <li><span class="status-good">✅ Wave Data Coverage:</span> All required timestamps available</li>
+                    <li><span class="status-good">✅ Cache Logic:</span> Properly validates with Sydney timezone</li>
+                    <li><span class="status-good">✅ Data Processing:</span> 13 hourly data points generated</li>
                 </ul>
             </div>
             
             <div class="bug-analysis">
-                <h3>🔧 Why It Might Seem "Buggy"</h3>
+                <h3>🔧 Bugs Fixed</h3>
                 <ol>
-                    <li><strong>Content Similarity:</strong> If surf conditions are stable, today's analysis might look very similar to yesterday's</li>
-                    <li><strong>Cache Efficiency:</strong> The 24-hour cache prevents unnecessary API calls and costs</li>
-                    <li><strong>User Expectations:</strong> Users might expect hourly updates, but system is designed for daily refresh</li>
-                    <li><strong>Visual Confusion:</strong> Without clear timestamps, users might not notice the analysis is fresh</li>
+                    <li><strong>✅ Timezone Bug:</strong> Fixed date comparison to use Sydney timezone instead of server timezone</li>
+                    <li><strong>✅ Time Window:</strong> Extended from 10 AM-6 PM to 6 AM-6 PM for better dawn patrol coverage</li>
+                    <li><strong>✅ Data Generation:</strong> Now properly saves analysis with Sydney date</li>
+                    <li><strong>✅ Cache Validation:</strong> Uses consistent Sydney timezone for all date operations</li>
                 </ol>
+                
+                <h4>🎯 Impact of Fixes:</h4>
+                <ul>
+                    <li>Analysis will refresh correctly when it's a new day in Sydney (not server time)</li>
+                    <li>Users get 4 additional hours of surf data (6-10 AM)</li>
+                    <li>Better coverage for dawn patrol surfers</li>
+                    <li>Consistent timezone handling across the entire system</li>
+                </ul>
             </div>
         </div>
 
@@ -413,9 +439,17 @@ for each hour from 10 AM to 6 PM Sydney:
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #e9ecef; border-radius: 10px;">
-            <h3>🎯 Conclusion</h3>
-            <p><strong>No bug exists in the date refresh logic.</strong> The system is functioning as designed with intelligent caching and proper date handling. The analysis is current and will automatically refresh tomorrow.</p>
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #d4edda; border-radius: 10px; border: 2px solid #28a745;">
+            <h3>🎯 Updated Conclusion</h3>
+            <p><strong>✅ Bugs Fixed Successfully!</strong> The timezone issue has been resolved and time window extended. The system now uses Sydney timezone consistently and provides 6 AM - 6 PM coverage for better surf planning.</p>
+            
+            <h4>🔧 Changes Made:</h4>
+            <ul style="text-align: left; display: inline-block;">
+                <li><strong>Timezone Fix:</strong> Date comparison uses Sydney timezone</li>
+                <li><strong>Extended Hours:</strong> 6 AM - 6 PM coverage (13 hours)</li>
+                <li><strong>Both Files Updated:</strong> today_analysis.py and tomorrow_analysis.py</li>
+                <li><strong>Consistent Handling:</strong> All date operations use Sydney timezone</li>
+            </ul>
         </div>
     </div>
 </body>
