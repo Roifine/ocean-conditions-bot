@@ -2,766 +2,478 @@
     "hours": [
         {
             "swellDirection": {
-                "sg": 53.65
-            },
-            "swellHeight": {
-                "sg": 1.22
-            },
-            "swellPeriod": {
-                "sg": 5.31
-            },
-            "time": "2025-12-05T00:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 55.19
-            },
-            "swellHeight": {
-                "sg": 1.18
-            },
-            "swellPeriod": {
-                "sg": 5.45
-            },
-            "time": "2025-12-05T01:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 56.72
-            },
-            "swellHeight": {
-                "sg": 1.15
-            },
-            "swellPeriod": {
-                "sg": 5.58
-            },
-            "time": "2025-12-05T02:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 58.26
-            },
-            "swellHeight": {
-                "sg": 1.11
-            },
-            "swellPeriod": {
-                "sg": 5.72
-            },
-            "time": "2025-12-05T03:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 64.57
-            },
-            "swellHeight": {
-                "sg": 0.99
-            },
-            "swellPeriod": {
-                "sg": 6.01
-            },
-            "time": "2025-12-05T04:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 70.88
-            },
-            "swellHeight": {
-                "sg": 0.88
-            },
-            "swellPeriod": {
-                "sg": 6.31
-            },
-            "time": "2025-12-05T05:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 77.19
-            },
-            "swellHeight": {
-                "sg": 0.76
-            },
-            "swellPeriod": {
-                "sg": 6.6
-            },
-            "time": "2025-12-05T06:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 78.27
-            },
-            "swellHeight": {
-                "sg": 0.67
-            },
-            "swellPeriod": {
-                "sg": 7.04
-            },
-            "time": "2025-12-05T07:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 79.34
-            },
-            "swellHeight": {
-                "sg": 0.59
-            },
-            "swellPeriod": {
-                "sg": 7.49
-            },
-            "time": "2025-12-05T08:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 80.42
-            },
-            "swellHeight": {
-                "sg": 0.5
-            },
-            "swellPeriod": {
-                "sg": 7.93
-            },
-            "time": "2025-12-05T09:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 77.87
-            },
-            "swellHeight": {
-                "sg": 0.61
-            },
-            "swellPeriod": {
-                "sg": 7.4
-            },
-            "time": "2025-12-05T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 75.33
-            },
-            "swellHeight": {
-                "sg": 0.72
-            },
-            "swellPeriod": {
-                "sg": 6.87
-            },
-            "time": "2025-12-05T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 72.78
-            },
-            "swellHeight": {
-                "sg": 0.83
-            },
-            "swellPeriod": {
-                "sg": 6.34
-            },
-            "time": "2025-12-05T12:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 70.51
-            },
-            "swellHeight": {
-                "sg": 0.9
-            },
-            "swellPeriod": {
-                "sg": 6.04
-            },
-            "time": "2025-12-05T13:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 68.23
-            },
-            "swellHeight": {
-                "sg": 0.98
-            },
-            "swellPeriod": {
-                "sg": 5.74
-            },
-            "time": "2025-12-05T14:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 65.96
-            },
-            "swellHeight": {
-                "sg": 1.05
-            },
-            "swellPeriod": {
-                "sg": 5.44
-            },
-            "time": "2025-12-05T15:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 63.09
-            },
-            "swellHeight": {
-                "sg": 1.15
-            },
-            "swellPeriod": {
-                "sg": 5.38
-            },
-            "time": "2025-12-05T16:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 60.23
-            },
-            "swellHeight": {
-                "sg": 1.26
-            },
-            "swellPeriod": {
-                "sg": 5.33
-            },
-            "time": "2025-12-05T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 57.36
-            },
-            "swellHeight": {
-                "sg": 1.36
-            },
-            "swellPeriod": {
-                "sg": 5.27
-            },
-            "time": "2025-12-05T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 57.91
-            },
-            "swellHeight": {
-                "sg": 1.33
-            },
-            "swellPeriod": {
-                "sg": 5.29
-            },
-            "time": "2025-12-05T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 58.47
-            },
-            "swellHeight": {
-                "sg": 1.31
-            },
-            "swellPeriod": {
-                "sg": 5.32
-            },
-            "time": "2025-12-05T20:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 59.02
-            },
-            "swellHeight": {
-                "sg": 1.28
-            },
-            "swellPeriod": {
-                "sg": 5.34
-            },
-            "time": "2025-12-05T21:00:00+00:00"
-        },
-        {
-            "swellDirection": {
                 "sg": 60.17
             },
             "swellHeight": {
-                "sg": 1.24
+                "sg": 1.3
             },
             "swellPeriod": {
-                "sg": 5.41
-            },
-            "time": "2025-12-05T22:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 61.31
-            },
-            "swellHeight": {
-                "sg": 1.21
-            },
-            "swellPeriod": {
-                "sg": 5.49
-            },
-            "time": "2025-12-05T23:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 62.46
-            },
-            "swellHeight": {
-                "sg": 1.17
-            },
-            "swellPeriod": {
-                "sg": 5.56
+                "sg": 5.48
             },
             "time": "2025-12-06T00:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 72.69
+                "sg": 69.3
             },
             "swellHeight": {
-                "sg": 0.96
+                "sg": 1.09
             },
             "swellPeriod": {
-                "sg": 5.63
+                "sg": 5.72
             },
             "time": "2025-12-06T01:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 82.91
+                "sg": 78.44
             },
             "swellHeight": {
-                "sg": 0.76
+                "sg": 0.87
             },
             "swellPeriod": {
-                "sg": 5.71
+                "sg": 5.95
             },
             "time": "2025-12-06T02:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 93.14
+                "sg": 87.57
             },
             "swellHeight": {
-                "sg": 0.55
+                "sg": 0.66
             },
             "swellPeriod": {
-                "sg": 5.78
+                "sg": 6.19
             },
             "time": "2025-12-06T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 87.53
+                "sg": 89.24
             },
             "swellHeight": {
-                "sg": 0.62
+                "sg": 0.63
             },
             "swellPeriod": {
-                "sg": 5.93
+                "sg": 5.73
             },
             "time": "2025-12-06T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.93
+                "sg": 90.92
             },
             "swellHeight": {
-                "sg": 0.7
+                "sg": 0.59
             },
             "swellPeriod": {
-                "sg": 6.08
+                "sg": 5.28
             },
             "time": "2025-12-06T05:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 76.32
+                "sg": 92.59
             },
             "swellHeight": {
-                "sg": 0.77
+                "sg": 0.56
             },
             "swellPeriod": {
-                "sg": 6.23
+                "sg": 4.82
             },
             "time": "2025-12-06T06:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 72.45
+                "sg": 89.39
             },
             "swellHeight": {
-                "sg": 0.91
+                "sg": 0.68
             },
             "swellPeriod": {
-                "sg": 6.03
+                "sg": 5.24
             },
             "time": "2025-12-06T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 68.57
+                "sg": 86.18
             },
             "swellHeight": {
-                "sg": 1.04
+                "sg": 0.81
             },
             "swellPeriod": {
-                "sg": 5.82
+                "sg": 5.66
             },
             "time": "2025-12-06T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 64.7
+                "sg": 82.98
             },
             "swellHeight": {
-                "sg": 1.18
+                "sg": 0.93
             },
             "swellPeriod": {
-                "sg": 5.62
+                "sg": 6.08
             },
             "time": "2025-12-06T09:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 59.62
+                "sg": 75.54
             },
             "swellHeight": {
-                "sg": 1.39
+                "sg": 1.16
             },
             "swellPeriod": {
-                "sg": 5.56
+                "sg": 5.95
             },
             "time": "2025-12-06T10:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 54.53
+                "sg": 68.09
             },
             "swellHeight": {
-                "sg": 1.6
+                "sg": 1.39
             },
             "swellPeriod": {
-                "sg": 5.49
+                "sg": 5.81
             },
             "time": "2025-12-06T11:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 49.45
+                "sg": 60.65
             },
             "swellHeight": {
-                "sg": 1.81
+                "sg": 1.62
             },
             "swellPeriod": {
-                "sg": 5.43
+                "sg": 5.68
             },
             "time": "2025-12-06T12:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 49.95
+                "sg": 58.38
             },
             "swellHeight": {
-                "sg": 1.8
+                "sg": 1.61
             },
             "swellPeriod": {
-                "sg": 5.55
+                "sg": 5.66
             },
             "time": "2025-12-06T13:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 50.45
+                "sg": 56.1
             },
             "swellHeight": {
-                "sg": 1.8
+                "sg": 1.6
             },
             "swellPeriod": {
-                "sg": 5.67
+                "sg": 5.63
             },
             "time": "2025-12-06T14:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 50.95
+                "sg": 53.83
             },
             "swellHeight": {
-                "sg": 1.79
+                "sg": 1.59
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.61
             },
             "time": "2025-12-06T15:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 51.28
+                "sg": 53.94
             },
             "swellHeight": {
-                "sg": 1.74
+                "sg": 1.52
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.63
             },
             "time": "2025-12-06T16:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 51.62
-            },
-            "swellHeight": {
-                "sg": 1.68
-            },
-            "swellPeriod": {
-                "sg": 5.78
-            },
-            "time": "2025-12-06T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 51.95
-            },
-            "swellHeight": {
-                "sg": 1.63
-            },
-            "swellPeriod": {
-                "sg": 5.78
-            },
-            "time": "2025-12-06T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 52.19
-            },
-            "swellHeight": {
-                "sg": 1.55
-            },
-            "swellPeriod": {
-                "sg": 5.78
-            },
-            "time": "2025-12-06T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 52.44
+                "sg": 54.06
             },
             "swellHeight": {
                 "sg": 1.46
             },
             "swellPeriod": {
-                "sg": 5.77
+                "sg": 5.65
+            },
+            "time": "2025-12-06T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 54.17
+            },
+            "swellHeight": {
+                "sg": 1.39
+            },
+            "swellPeriod": {
+                "sg": 5.67
+            },
+            "time": "2025-12-06T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 51.83
+            },
+            "swellHeight": {
+                "sg": 1.3
+            },
+            "swellPeriod": {
+                "sg": 5.52
+            },
+            "time": "2025-12-06T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 49.49
+            },
+            "swellHeight": {
+                "sg": 1.2
+            },
+            "swellPeriod": {
+                "sg": 5.37
             },
             "time": "2025-12-06T20:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 52.68
+                "sg": 47.15
             },
             "swellHeight": {
-                "sg": 1.38
+                "sg": 1.11
             },
             "swellPeriod": {
-                "sg": 5.77
+                "sg": 5.22
             },
             "time": "2025-12-06T21:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 52.97
+                "sg": 49.0
             },
             "swellHeight": {
-                "sg": 1.32
+                "sg": 1.05
             },
             "swellPeriod": {
-                "sg": 5.78
+                "sg": 5.47
             },
             "time": "2025-12-06T22:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 53.25
+                "sg": 50.84
             },
             "swellHeight": {
-                "sg": 1.25
+                "sg": 1.0
             },
             "swellPeriod": {
-                "sg": 5.8
+                "sg": 5.73
             },
             "time": "2025-12-06T23:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 53.54
+                "sg": 52.69
             },
             "swellHeight": {
-                "sg": 1.19
+                "sg": 0.94
             },
             "swellPeriod": {
-                "sg": 5.81
+                "sg": 5.98
             },
             "time": "2025-12-07T00:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 99.33
+                "sg": 95.86
             },
             "swellHeight": {
-                "sg": 1.19
+                "sg": 1.16
             },
             "swellPeriod": {
-                "sg": 5.96
+                "sg": 6.16
             },
             "time": "2025-12-07T01:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 145.13
+                "sg": 139.04
             },
             "swellHeight": {
-                "sg": 1.19
+                "sg": 1.39
             },
             "swellPeriod": {
-                "sg": 6.1
+                "sg": 6.34
             },
             "time": "2025-12-07T02:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 190.92
+                "sg": 182.21
             },
             "swellHeight": {
-                "sg": 1.19
+                "sg": 1.61
             },
             "swellPeriod": {
-                "sg": 6.25
+                "sg": 6.52
             },
             "time": "2025-12-07T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 187.78
+                "sg": 179.58
             },
             "swellHeight": {
-                "sg": 1.34
+                "sg": 1.75
             },
             "swellPeriod": {
-                "sg": 6.31
+                "sg": 6.52
             },
             "time": "2025-12-07T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 184.63
+                "sg": 176.96
             },
             "swellHeight": {
-                "sg": 1.5
+                "sg": 1.88
             },
             "swellPeriod": {
-                "sg": 6.36
+                "sg": 6.51
             },
             "time": "2025-12-07T05:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 181.49
+                "sg": 174.33
             },
             "swellHeight": {
-                "sg": 1.65
+                "sg": 2.02
             },
             "swellPeriod": {
-                "sg": 6.42
+                "sg": 6.51
             },
             "time": "2025-12-07T06:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 179.89
+                "sg": 174.11
             },
             "swellHeight": {
-                "sg": 1.7
+                "sg": 2.0
             },
             "swellPeriod": {
-                "sg": 6.42
+                "sg": 6.53
             },
             "time": "2025-12-07T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 178.3
+                "sg": 173.88
             },
             "swellHeight": {
-                "sg": 1.75
+                "sg": 1.97
             },
             "swellPeriod": {
-                "sg": 6.42
+                "sg": 6.54
             },
             "time": "2025-12-07T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 176.7
+                "sg": 173.66
             },
             "swellHeight": {
-                "sg": 1.8
+                "sg": 1.95
             },
             "swellPeriod": {
-                "sg": 6.42
+                "sg": 6.56
             },
             "time": "2025-12-07T09:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 174.46
+                "sg": 172.46
             },
             "swellHeight": {
-                "sg": 1.82
+                "sg": 1.94
             },
             "swellPeriod": {
-                "sg": 6.35
+                "sg": 6.49
             },
             "time": "2025-12-07T10:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 172.22
+                "sg": 171.27
             },
             "swellHeight": {
-                "sg": 1.83
+                "sg": 1.93
             },
             "swellPeriod": {
-                "sg": 6.29
+                "sg": 6.43
             },
             "time": "2025-12-07T11:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 169.98
+                "sg": 170.07
             },
             "swellHeight": {
-                "sg": 1.85
+                "sg": 1.92
             },
             "swellPeriod": {
-                "sg": 6.22
+                "sg": 6.36
             },
             "time": "2025-12-07T12:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 169.68
+                "sg": 169.62
             },
             "swellHeight": {
-                "sg": 1.8
+                "sg": 1.86
             },
             "swellPeriod": {
-                "sg": 6.24
+                "sg": 6.33
             },
             "time": "2025-12-07T13:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 169.37
+                "sg": 169.17
             },
             "swellHeight": {
-                "sg": 1.75
+                "sg": 1.8
             },
             "swellPeriod": {
-                "sg": 6.26
+                "sg": 6.31
             },
             "time": "2025-12-07T14:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 169.07
+                "sg": 168.72
             },
             "swellHeight": {
-                "sg": 1.7
+                "sg": 1.74
             },
             "swellPeriod": {
                 "sg": 6.28
@@ -770,82 +482,82 @@
         },
         {
             "swellDirection": {
-                "sg": 166.83
+                "sg": 168.36
             },
             "swellHeight": {
-                "sg": 1.65
+                "sg": 1.66
             },
             "swellPeriod": {
-                "sg": 6.17
+                "sg": 6.25
             },
             "time": "2025-12-07T16:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 164.58
+                "sg": 168.0
             },
             "swellHeight": {
-                "sg": 1.59
+                "sg": 1.57
             },
             "swellPeriod": {
-                "sg": 6.07
+                "sg": 6.23
             },
             "time": "2025-12-07T17:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 162.34
+                "sg": 167.64
             },
             "swellHeight": {
-                "sg": 1.54
+                "sg": 1.49
             },
             "swellPeriod": {
-                "sg": 5.96
+                "sg": 6.2
             },
             "time": "2025-12-07T18:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 165.53
+                "sg": 168.4
             },
             "swellHeight": {
-                "sg": 1.43
+                "sg": 1.4
             },
             "swellPeriod": {
-                "sg": 6.03
+                "sg": 6.2
             },
             "time": "2025-12-07T19:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 168.73
+                "sg": 169.15
             },
             "swellHeight": {
                 "sg": 1.31
             },
             "swellPeriod": {
-                "sg": 6.11
+                "sg": 6.19
             },
             "time": "2025-12-07T20:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 171.92
+                "sg": 169.91
             },
             "swellHeight": {
-                "sg": 1.2
+                "sg": 1.22
             },
             "swellPeriod": {
-                "sg": 6.18
+                "sg": 6.19
             },
             "time": "2025-12-07T21:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 172.7
+                "sg": 170.17
             },
             "swellHeight": {
-                "sg": 1.12
+                "sg": 1.14
             },
             "swellPeriod": {
                 "sg": 6.19
@@ -854,457 +566,457 @@
         },
         {
             "swellDirection": {
-                "sg": 173.47
+                "sg": 170.44
             },
             "swellHeight": {
-                "sg": 1.05
+                "sg": 1.07
             },
             "swellPeriod": {
-                "sg": 6.2
+                "sg": 6.19
             },
             "time": "2025-12-07T23:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 174.25
+                "sg": 170.7
             },
             "swellHeight": {
-                "sg": 0.97
+                "sg": 0.99
             },
             "swellPeriod": {
-                "sg": 6.21
+                "sg": 6.19
             },
             "time": "2025-12-08T00:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 173.82
+                "sg": 171.5
             },
             "swellHeight": {
                 "sg": 0.92
             },
             "swellPeriod": {
-                "sg": 6.16
+                "sg": 6.22
             },
             "time": "2025-12-08T01:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 173.38
+                "sg": 172.31
             },
             "swellHeight": {
-                "sg": 0.87
+                "sg": 0.84
             },
             "swellPeriod": {
-                "sg": 6.1
+                "sg": 6.25
             },
             "time": "2025-12-08T02:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 172.95
+                "sg": 173.11
             },
             "swellHeight": {
-                "sg": 0.82
+                "sg": 0.77
             },
             "swellPeriod": {
-                "sg": 6.05
+                "sg": 6.28
             },
             "time": "2025-12-08T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 171.6
+                "sg": 172.85
             },
             "swellHeight": {
-                "sg": 0.75
+                "sg": 0.72
             },
             "swellPeriod": {
-                "sg": 6.14
+                "sg": 6.31
             },
             "time": "2025-12-08T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 170.26
-            },
-            "swellHeight": {
-                "sg": 0.69
-            },
-            "swellPeriod": {
-                "sg": 6.22
-            },
-            "time": "2025-12-08T05:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 168.91
-            },
-            "swellHeight": {
-                "sg": 0.62
-            },
-            "swellPeriod": {
-                "sg": 6.31
-            },
-            "time": "2025-12-08T06:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 146.29
-            },
-            "swellHeight": {
-                "sg": 0.62
-            },
-            "swellPeriod": {
-                "sg": 5.86
-            },
-            "time": "2025-12-08T07:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 123.68
-            },
-            "swellHeight": {
-                "sg": 0.61
-            },
-            "swellPeriod": {
-                "sg": 5.42
-            },
-            "time": "2025-12-08T08:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 101.06
-            },
-            "swellHeight": {
-                "sg": 0.61
-            },
-            "swellPeriod": {
-                "sg": 4.97
-            },
-            "time": "2025-12-08T09:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 95.36
-            },
-            "swellHeight": {
-                "sg": 0.71
-            },
-            "swellPeriod": {
-                "sg": 5.03
-            },
-            "time": "2025-12-08T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 89.66
-            },
-            "swellHeight": {
-                "sg": 0.81
-            },
-            "swellPeriod": {
-                "sg": 5.08
-            },
-            "time": "2025-12-08T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 83.96
-            },
-            "swellHeight": {
-                "sg": 0.91
-            },
-            "swellPeriod": {
-                "sg": 5.14
-            },
-            "time": "2025-12-08T12:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 77.58
-            },
-            "swellHeight": {
-                "sg": 1.01
-            },
-            "swellPeriod": {
-                "sg": 5.06
-            },
-            "time": "2025-12-08T13:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.19
-            },
-            "swellHeight": {
-                "sg": 1.1
-            },
-            "swellPeriod": {
-                "sg": 4.98
-            },
-            "time": "2025-12-08T14:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 64.81
-            },
-            "swellHeight": {
-                "sg": 1.2
-            },
-            "swellPeriod": {
-                "sg": 4.9
-            },
-            "time": "2025-12-08T15:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 63.13
-            },
-            "swellHeight": {
-                "sg": 1.18
-            },
-            "swellPeriod": {
-                "sg": 4.81
-            },
-            "time": "2025-12-08T16:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 61.44
-            },
-            "swellHeight": {
-                "sg": 1.16
-            },
-            "swellPeriod": {
-                "sg": 4.72
-            },
-            "time": "2025-12-08T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 59.76
-            },
-            "swellHeight": {
-                "sg": 1.14
-            },
-            "swellPeriod": {
-                "sg": 4.63
-            },
-            "time": "2025-12-08T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 61.21
-            },
-            "swellHeight": {
-                "sg": 1.05
-            },
-            "swellPeriod": {
-                "sg": 4.6
-            },
-            "time": "2025-12-08T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 62.67
-            },
-            "swellHeight": {
-                "sg": 0.95
-            },
-            "swellPeriod": {
-                "sg": 4.57
-            },
-            "time": "2025-12-08T20:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 64.12
-            },
-            "swellHeight": {
-                "sg": 0.86
-            },
-            "swellPeriod": {
-                "sg": 4.54
-            },
-            "time": "2025-12-08T21:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 65.43
-            },
-            "swellHeight": {
-                "sg": 0.86
-            },
-            "swellPeriod": {
-                "sg": 4.57
-            },
-            "time": "2025-12-08T22:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 66.75
-            },
-            "swellHeight": {
-                "sg": 0.87
-            },
-            "swellPeriod": {
-                "sg": 4.61
-            },
-            "time": "2025-12-08T23:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 68.06
-            },
-            "swellHeight": {
-                "sg": 0.87
-            },
-            "swellPeriod": {
-                "sg": 4.64
-            },
-            "time": "2025-12-09T00:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 72.1
-            },
-            "swellHeight": {
-                "sg": 0.81
-            },
-            "swellPeriod": {
-                "sg": 4.75
-            },
-            "time": "2025-12-09T01:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 76.14
-            },
-            "swellHeight": {
-                "sg": 0.74
-            },
-            "swellPeriod": {
-                "sg": 4.85
-            },
-            "time": "2025-12-09T02:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 80.18
-            },
-            "swellHeight": {
-                "sg": 0.68
-            },
-            "swellPeriod": {
-                "sg": 4.96
-            },
-            "time": "2025-12-09T03:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 85.16
-            },
-            "swellHeight": {
-                "sg": 0.63
-            },
-            "swellPeriod": {
-                "sg": 4.96
-            },
-            "time": "2025-12-09T04:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 90.13
-            },
-            "swellHeight": {
-                "sg": 0.58
-            },
-            "swellPeriod": {
-                "sg": 4.97
-            },
-            "time": "2025-12-09T05:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 95.11
-            },
-            "swellHeight": {
-                "sg": 0.53
-            },
-            "swellPeriod": {
-                "sg": 4.97
-            },
-            "time": "2025-12-09T06:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 88.48
+                "sg": 172.59
             },
             "swellHeight": {
                 "sg": 0.66
             },
             "swellPeriod": {
-                "sg": 5.07
+                "sg": 6.35
+            },
+            "time": "2025-12-08T05:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 172.33
+            },
+            "swellHeight": {
+                "sg": 0.61
+            },
+            "swellPeriod": {
+                "sg": 6.38
+            },
+            "time": "2025-12-08T06:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 145.01
+            },
+            "swellHeight": {
+                "sg": 0.53
+            },
+            "swellPeriod": {
+                "sg": 6.28
+            },
+            "time": "2025-12-08T07:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 117.7
+            },
+            "swellHeight": {
+                "sg": 0.46
+            },
+            "swellPeriod": {
+                "sg": 6.17
+            },
+            "time": "2025-12-08T08:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 90.38
+            },
+            "swellHeight": {
+                "sg": 0.38
+            },
+            "swellPeriod": {
+                "sg": 6.07
+            },
+            "time": "2025-12-08T09:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 86.64
+            },
+            "swellHeight": {
+                "sg": 0.49
+            },
+            "swellPeriod": {
+                "sg": 5.99
+            },
+            "time": "2025-12-08T10:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 82.89
+            },
+            "swellHeight": {
+                "sg": 0.61
+            },
+            "swellPeriod": {
+                "sg": 5.91
+            },
+            "time": "2025-12-08T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 79.15
+            },
+            "swellHeight": {
+                "sg": 0.72
+            },
+            "swellPeriod": {
+                "sg": 5.83
+            },
+            "time": "2025-12-08T12:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 70.0
+            },
+            "swellHeight": {
+                "sg": 0.94
+            },
+            "swellPeriod": {
+                "sg": 5.5
+            },
+            "time": "2025-12-08T13:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 60.84
+            },
+            "swellHeight": {
+                "sg": 1.15
+            },
+            "swellPeriod": {
+                "sg": 5.18
+            },
+            "time": "2025-12-08T14:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 51.69
+            },
+            "swellHeight": {
+                "sg": 1.37
+            },
+            "swellPeriod": {
+                "sg": 4.85
+            },
+            "time": "2025-12-08T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 52.49
+            },
+            "swellHeight": {
+                "sg": 1.33
+            },
+            "swellPeriod": {
+                "sg": 4.82
+            },
+            "time": "2025-12-08T16:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 53.28
+            },
+            "swellHeight": {
+                "sg": 1.3
+            },
+            "swellPeriod": {
+                "sg": 4.78
+            },
+            "time": "2025-12-08T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 54.08
+            },
+            "swellHeight": {
+                "sg": 1.26
+            },
+            "swellPeriod": {
+                "sg": 4.75
+            },
+            "time": "2025-12-08T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 55.12
+            },
+            "swellHeight": {
+                "sg": 1.22
+            },
+            "swellPeriod": {
+                "sg": 4.76
+            },
+            "time": "2025-12-08T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 56.17
+            },
+            "swellHeight": {
+                "sg": 1.18
+            },
+            "swellPeriod": {
+                "sg": 4.77
+            },
+            "time": "2025-12-08T20:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 57.21
+            },
+            "swellHeight": {
+                "sg": 1.14
+            },
+            "swellPeriod": {
+                "sg": 4.78
+            },
+            "time": "2025-12-08T21:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 57.74
+            },
+            "swellHeight": {
+                "sg": 1.1
+            },
+            "swellPeriod": {
+                "sg": 4.76
+            },
+            "time": "2025-12-08T22:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 58.27
+            },
+            "swellHeight": {
+                "sg": 1.05
+            },
+            "swellPeriod": {
+                "sg": 4.73
+            },
+            "time": "2025-12-08T23:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 58.8
+            },
+            "swellHeight": {
+                "sg": 1.01
+            },
+            "swellPeriod": {
+                "sg": 4.71
+            },
+            "time": "2025-12-09T00:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.05
+            },
+            "swellHeight": {
+                "sg": 0.96
+            },
+            "swellPeriod": {
+                "sg": 4.76
+            },
+            "time": "2025-12-09T01:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.3
+            },
+            "swellHeight": {
+                "sg": 0.92
+            },
+            "swellPeriod": {
+                "sg": 4.8
+            },
+            "time": "2025-12-09T02:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.55
+            },
+            "swellHeight": {
+                "sg": 0.87
+            },
+            "swellPeriod": {
+                "sg": 4.85
+            },
+            "time": "2025-12-09T03:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.92
+            },
+            "swellHeight": {
+                "sg": 0.86
+            },
+            "swellPeriod": {
+                "sg": 4.81
+            },
+            "time": "2025-12-09T04:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 60.29
+            },
+            "swellHeight": {
+                "sg": 0.85
+            },
+            "swellPeriod": {
+                "sg": 4.77
+            },
+            "time": "2025-12-09T05:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 60.66
+            },
+            "swellHeight": {
+                "sg": 0.84
+            },
+            "swellPeriod": {
+                "sg": 4.73
+            },
+            "time": "2025-12-09T06:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 60.69
+            },
+            "swellHeight": {
+                "sg": 0.84
+            },
+            "swellPeriod": {
+                "sg": 4.65
             },
             "time": "2025-12-09T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.86
+                "sg": 60.72
             },
             "swellHeight": {
-                "sg": 0.78
+                "sg": 0.83
             },
             "swellPeriod": {
-                "sg": 5.18
+                "sg": 4.57
             },
             "time": "2025-12-09T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 75.23
+                "sg": 60.75
             },
             "swellHeight": {
-                "sg": 0.91
+                "sg": 0.83
             },
             "swellPeriod": {
-                "sg": 5.28
+                "sg": 4.49
             },
             "time": "2025-12-09T09:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 70.35
+                "sg": 60.25
             },
             "swellHeight": {
-                "sg": 0.98
+                "sg": 0.8
             },
             "swellPeriod": {
-                "sg": 5.13
+                "sg": 4.6
             },
             "time": "2025-12-09T10:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 65.48
+                "sg": 59.75
             },
             "swellHeight": {
-                "sg": 1.06
+                "sg": 0.77
             },
             "swellPeriod": {
-                "sg": 4.98
+                "sg": 4.71
             },
             "time": "2025-12-09T11:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 60.6
+                "sg": 59.25
             },
             "swellHeight": {
-                "sg": 1.13
+                "sg": 0.74
             },
             "swellPeriod": {
-                "sg": 4.83
+                "sg": 4.82
             },
             "time": "2025-12-09T12:00:00+00:00"
         },
@@ -1313,955 +1025,955 @@
                 "sg": 57.96
             },
             "swellHeight": {
-                "sg": 1.12
+                "sg": 0.71
             },
             "swellPeriod": {
-                "sg": 4.84
+                "sg": 4.95
             },
             "time": "2025-12-09T13:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 55.32
-            },
-            "swellHeight": {
-                "sg": 1.1
-            },
-            "swellPeriod": {
-                "sg": 4.85
-            },
-            "time": "2025-12-09T14:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 52.68
-            },
-            "swellHeight": {
-                "sg": 1.09
-            },
-            "swellPeriod": {
-                "sg": 4.86
-            },
-            "time": "2025-12-09T15:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.04
-            },
-            "swellHeight": {
-                "sg": 1.05
-            },
-            "swellPeriod": {
-                "sg": 4.92
-            },
-            "time": "2025-12-09T16:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.4
-            },
-            "swellHeight": {
-                "sg": 1.0
-            },
-            "swellPeriod": {
-                "sg": 4.99
-            },
-            "time": "2025-12-09T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.76
-            },
-            "swellHeight": {
-                "sg": 0.96
-            },
-            "swellPeriod": {
-                "sg": 5.05
-            },
-            "time": "2025-12-09T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.81
-            },
-            "swellHeight": {
-                "sg": 0.93
-            },
-            "swellPeriod": {
-                "sg": 5.07
-            },
-            "time": "2025-12-09T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.86
-            },
-            "swellHeight": {
-                "sg": 0.89
-            },
-            "swellPeriod": {
-                "sg": 5.1
-            },
-            "time": "2025-12-09T20:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.91
-            },
-            "swellHeight": {
-                "sg": 0.86
-            },
-            "swellPeriod": {
-                "sg": 5.12
-            },
-            "time": "2025-12-09T21:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.71
-            },
-            "swellHeight": {
-                "sg": 0.84
-            },
-            "swellPeriod": {
-                "sg": 5.13
-            },
-            "time": "2025-12-09T22:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.51
-            },
-            "swellHeight": {
-                "sg": 0.82
-            },
-            "swellPeriod": {
-                "sg": 5.15
-            },
-            "time": "2025-12-09T23:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 53.31
-            },
-            "swellHeight": {
-                "sg": 0.8
-            },
-            "swellPeriod": {
-                "sg": 5.16
-            },
-            "time": "2025-12-10T00:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 54.2
-            },
-            "swellHeight": {
-                "sg": 0.79
-            },
-            "swellPeriod": {
-                "sg": 5.19
-            },
-            "time": "2025-12-10T01:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 55.08
-            },
-            "swellHeight": {
-                "sg": 0.77
-            },
-            "swellPeriod": {
-                "sg": 5.21
-            },
-            "time": "2025-12-10T02:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 55.97
-            },
-            "swellHeight": {
-                "sg": 0.76
-            },
-            "swellPeriod": {
-                "sg": 5.24
-            },
-            "time": "2025-12-10T03:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 56.13
-            },
-            "swellHeight": {
-                "sg": 0.74
-            },
-            "swellPeriod": {
-                "sg": 5.26
-            },
-            "time": "2025-12-10T04:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 56.3
-            },
-            "swellHeight": {
-                "sg": 0.73
-            },
-            "swellPeriod": {
-                "sg": 5.29
-            },
-            "time": "2025-12-10T05:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 56.46
-            },
-            "swellHeight": {
-                "sg": 0.71
-            },
-            "swellPeriod": {
-                "sg": 5.31
-            },
-            "time": "2025-12-10T06:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 56.04
-            },
-            "swellHeight": {
-                "sg": 0.68
-            },
-            "swellPeriod": {
-                "sg": 5.26
-            },
-            "time": "2025-12-10T07:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 55.61
-            },
-            "swellHeight": {
-                "sg": 0.64
-            },
-            "swellPeriod": {
-                "sg": 5.21
-            },
-            "time": "2025-12-10T08:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 55.19
-            },
-            "swellHeight": {
-                "sg": 0.61
-            },
-            "swellPeriod": {
-                "sg": 5.16
-            },
-            "time": "2025-12-10T09:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 99.13
-            },
-            "swellHeight": {
-                "sg": 0.62
-            },
-            "swellPeriod": {
-                "sg": 5.76
-            },
-            "time": "2025-12-10T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 143.08
-            },
-            "swellHeight": {
-                "sg": 0.63
-            },
-            "swellPeriod": {
-                "sg": 6.37
-            },
-            "time": "2025-12-10T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 187.02
-            },
-            "swellHeight": {
-                "sg": 0.64
-            },
-            "swellPeriod": {
-                "sg": 6.97
-            },
-            "time": "2025-12-10T12:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 141.83
-            },
-            "swellHeight": {
-                "sg": 0.6
-            },
-            "swellPeriod": {
-                "sg": 6.34
-            },
-            "time": "2025-12-10T13:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 96.65
-            },
-            "swellHeight": {
-                "sg": 0.56
-            },
-            "swellPeriod": {
-                "sg": 5.71
-            },
-            "time": "2025-12-10T14:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 51.46
-            },
-            "swellHeight": {
-                "sg": 0.52
-            },
-            "swellPeriod": {
-                "sg": 5.08
-            },
-            "time": "2025-12-10T15:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 51.07
-            },
-            "swellHeight": {
-                "sg": 0.49
-            },
-            "swellPeriod": {
-                "sg": 5.07
-            },
-            "time": "2025-12-10T16:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 50.67
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 5.06
-            },
-            "time": "2025-12-10T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 50.28
-            },
-            "swellHeight": {
-                "sg": 0.43
-            },
-            "swellPeriod": {
-                "sg": 5.05
-            },
-            "time": "2025-12-10T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 96.01
-            },
-            "swellHeight": {
-                "sg": 0.44
-            },
-            "swellPeriod": {
-                "sg": 6.76
-            },
-            "time": "2025-12-10T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 141.73
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 8.48
-            },
-            "time": "2025-12-10T20:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 187.46
-            },
-            "swellHeight": {
-                "sg": 0.47
-            },
-            "swellPeriod": {
-                "sg": 10.19
-            },
-            "time": "2025-12-10T21:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 187.62
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 10.09
-            },
-            "time": "2025-12-10T22:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 187.78
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 9.98
-            },
-            "time": "2025-12-10T23:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 187.94
-            },
-            "swellHeight": {
-                "sg": 0.45
-            },
-            "swellPeriod": {
-                "sg": 9.88
-            },
-            "time": "2025-12-11T00:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 174.91
-            },
-            "swellHeight": {
-                "sg": 0.45
-            },
-            "swellPeriod": {
-                "sg": 9.53
-            },
-            "time": "2025-12-11T01:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 161.87
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 9.17
-            },
-            "time": "2025-12-11T02:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 148.84
-            },
-            "swellHeight": {
-                "sg": 0.46
-            },
-            "swellPeriod": {
-                "sg": 8.82
-            },
-            "time": "2025-12-11T03:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 120.75
-            },
-            "swellHeight": {
-                "sg": 0.51
-            },
-            "swellPeriod": {
-                "sg": 8.22
-            },
-            "time": "2025-12-11T04:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 92.67
-            },
-            "swellHeight": {
-                "sg": 0.55
-            },
-            "swellPeriod": {
-                "sg": 7.63
-            },
-            "time": "2025-12-11T05:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 64.58
-            },
-            "swellHeight": {
-                "sg": 0.6
-            },
-            "swellPeriod": {
-                "sg": 7.03
-            },
-            "time": "2025-12-11T06:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 95.86
-            },
-            "swellHeight": {
-                "sg": 0.6
-            },
-            "swellPeriod": {
-                "sg": 6.57
-            },
-            "time": "2025-12-11T07:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 127.13
-            },
-            "swellHeight": {
-                "sg": 0.59
-            },
-            "swellPeriod": {
-                "sg": 6.11
-            },
-            "time": "2025-12-11T08:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 158.41
-            },
-            "swellHeight": {
-                "sg": 0.59
-            },
-            "swellPeriod": {
-                "sg": 5.65
-            },
-            "time": "2025-12-11T09:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 137.88
-            },
-            "swellHeight": {
-                "sg": 0.66
-            },
-            "swellPeriod": {
-                "sg": 5.81
-            },
-            "time": "2025-12-11T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 117.36
-            },
-            "swellHeight": {
-                "sg": 0.72
-            },
-            "swellPeriod": {
-                "sg": 5.97
-            },
-            "time": "2025-12-11T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 96.83
-            },
-            "swellHeight": {
-                "sg": 0.79
-            },
-            "swellPeriod": {
-                "sg": 6.13
-            },
-            "time": "2025-12-11T12:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 86.67
-            },
-            "swellHeight": {
-                "sg": 0.74
-            },
-            "swellPeriod": {
-                "sg": 6.37
-            },
-            "time": "2025-12-11T13:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 76.52
+                "sg": 56.67
             },
             "swellHeight": {
                 "sg": 0.69
             },
             "swellPeriod": {
-                "sg": 6.62
+                "sg": 5.08
             },
-            "time": "2025-12-11T14:00:00+00:00"
+            "time": "2025-12-09T14:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 66.36
+                "sg": 55.38
+            },
+            "swellHeight": {
+                "sg": 0.66
+            },
+            "swellPeriod": {
+                "sg": 5.21
+            },
+            "time": "2025-12-09T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 54.8
             },
             "swellHeight": {
                 "sg": 0.64
             },
             "swellPeriod": {
-                "sg": 6.86
+                "sg": 5.3
             },
-            "time": "2025-12-11T15:00:00+00:00"
+            "time": "2025-12-09T16:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 72.2
+                "sg": 54.21
             },
             "swellHeight": {
-                "sg": 0.67
+                "sg": 0.61
             },
             "swellPeriod": {
-                "sg": 8.15
+                "sg": 5.4
             },
-            "time": "2025-12-11T16:00:00+00:00"
+            "time": "2025-12-09T17:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 78.03
+                "sg": 53.63
             },
             "swellHeight": {
-                "sg": 0.71
+                "sg": 0.59
             },
             "swellPeriod": {
-                "sg": 9.44
+                "sg": 5.49
             },
-            "time": "2025-12-11T17:00:00+00:00"
+            "time": "2025-12-09T18:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 83.87
+                "sg": 82.34
             },
             "swellHeight": {
-                "sg": 0.74
+                "sg": 0.64
             },
             "swellPeriod": {
-                "sg": 10.73
+                "sg": 5.34
             },
-            "time": "2025-12-11T18:00:00+00:00"
+            "time": "2025-12-09T19:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 83.9
+                "sg": 111.05
             },
             "swellHeight": {
-                "sg": 0.81
+                "sg": 0.68
             },
             "swellPeriod": {
-                "sg": 10.44
+                "sg": 5.18
             },
-            "time": "2025-12-11T19:00:00+00:00"
+            "time": "2025-12-09T20:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 83.94
+                "sg": 139.76
             },
             "swellHeight": {
-                "sg": 0.89
+                "sg": 0.73
             },
             "swellPeriod": {
-                "sg": 10.14
+                "sg": 5.03
             },
-            "time": "2025-12-11T20:00:00+00:00"
+            "time": "2025-12-09T21:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 83.97
+                "sg": 148.78
             },
             "swellHeight": {
-                "sg": 0.96
+                "sg": 0.88
             },
             "swellPeriod": {
-                "sg": 9.85
+                "sg": 4.9
             },
-            "time": "2025-12-11T21:00:00+00:00"
+            "time": "2025-12-09T22:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 82.93
+                "sg": 157.81
             },
             "swellHeight": {
                 "sg": 1.03
             },
             "swellPeriod": {
-                "sg": 9.61
+                "sg": 4.78
+            },
+            "time": "2025-12-09T23:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 166.83
+            },
+            "swellHeight": {
+                "sg": 1.18
+            },
+            "swellPeriod": {
+                "sg": 4.65
+            },
+            "time": "2025-12-10T00:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 166.36
+            },
+            "swellHeight": {
+                "sg": 1.13
+            },
+            "swellPeriod": {
+                "sg": 4.59
+            },
+            "time": "2025-12-10T01:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 165.88
+            },
+            "swellHeight": {
+                "sg": 1.07
+            },
+            "swellPeriod": {
+                "sg": 4.52
+            },
+            "time": "2025-12-10T02:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 165.41
+            },
+            "swellHeight": {
+                "sg": 1.02
+            },
+            "swellPeriod": {
+                "sg": 4.46
+            },
+            "time": "2025-12-10T03:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 165.22
+            },
+            "swellHeight": {
+                "sg": 0.97
+            },
+            "swellPeriod": {
+                "sg": 4.47
+            },
+            "time": "2025-12-10T04:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 165.03
+            },
+            "swellHeight": {
+                "sg": 0.91
+            },
+            "swellPeriod": {
+                "sg": 4.47
+            },
+            "time": "2025-12-10T05:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 164.84
+            },
+            "swellHeight": {
+                "sg": 0.86
+            },
+            "swellPeriod": {
+                "sg": 4.48
+            },
+            "time": "2025-12-10T06:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 163.17
+            },
+            "swellHeight": {
+                "sg": 0.83
+            },
+            "swellPeriod": {
+                "sg": 4.42
+            },
+            "time": "2025-12-10T07:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 161.51
+            },
+            "swellHeight": {
+                "sg": 0.79
+            },
+            "swellPeriod": {
+                "sg": 4.37
+            },
+            "time": "2025-12-10T08:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 159.84
+            },
+            "swellHeight": {
+                "sg": 0.76
+            },
+            "swellPeriod": {
+                "sg": 4.31
+            },
+            "time": "2025-12-10T09:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 166.91
+            },
+            "swellHeight": {
+                "sg": 0.69
+            },
+            "swellPeriod": {
+                "sg": 6.5
+            },
+            "time": "2025-12-10T10:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 173.99
+            },
+            "swellHeight": {
+                "sg": 0.63
+            },
+            "swellPeriod": {
+                "sg": 8.69
+            },
+            "time": "2025-12-10T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 181.06
+            },
+            "swellHeight": {
+                "sg": 0.56
+            },
+            "swellPeriod": {
+                "sg": 10.88
+            },
+            "time": "2025-12-10T12:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.91
+            },
+            "swellHeight": {
+                "sg": 0.57
+            },
+            "swellPeriod": {
+                "sg": 10.72
+            },
+            "time": "2025-12-10T13:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.77
+            },
+            "swellHeight": {
+                "sg": 0.59
+            },
+            "swellPeriod": {
+                "sg": 10.55
+            },
+            "time": "2025-12-10T14:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.62
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 10.39
+            },
+            "time": "2025-12-10T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.49
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 10.39
+            },
+            "time": "2025-12-10T16:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.37
+            },
+            "swellHeight": {
+                "sg": 0.59
+            },
+            "swellPeriod": {
+                "sg": 10.39
+            },
+            "time": "2025-12-10T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.24
+            },
+            "swellHeight": {
+                "sg": 0.59
+            },
+            "swellPeriod": {
+                "sg": 10.39
+            },
+            "time": "2025-12-10T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.21
+            },
+            "swellHeight": {
+                "sg": 0.59
+            },
+            "swellPeriod": {
+                "sg": 10.19
+            },
+            "time": "2025-12-10T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.17
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 10.0
+            },
+            "time": "2025-12-10T20:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.14
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 9.8
+            },
+            "time": "2025-12-10T21:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 163.42
+            },
+            "swellHeight": {
+                "sg": 0.64
+            },
+            "swellPeriod": {
+                "sg": 8.11
+            },
+            "time": "2025-12-10T22:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 146.69
+            },
+            "swellHeight": {
+                "sg": 0.68
+            },
+            "swellPeriod": {
+                "sg": 6.42
+            },
+            "time": "2025-12-10T23:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 129.97
+            },
+            "swellHeight": {
+                "sg": 0.72
+            },
+            "swellPeriod": {
+                "sg": 4.73
+            },
+            "time": "2025-12-11T00:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 129.49
+            },
+            "swellHeight": {
+                "sg": 0.71
+            },
+            "swellPeriod": {
+                "sg": 4.76
+            },
+            "time": "2025-12-11T01:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 129.0
+            },
+            "swellHeight": {
+                "sg": 0.71
+            },
+            "swellPeriod": {
+                "sg": 4.8
+            },
+            "time": "2025-12-11T02:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 128.52
+            },
+            "swellHeight": {
+                "sg": 0.7
+            },
+            "swellPeriod": {
+                "sg": 4.83
+            },
+            "time": "2025-12-11T03:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 145.82
+            },
+            "swellHeight": {
+                "sg": 0.67
+            },
+            "swellPeriod": {
+                "sg": 6.15
+            },
+            "time": "2025-12-11T04:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 163.11
+            },
+            "swellHeight": {
+                "sg": 0.64
+            },
+            "swellPeriod": {
+                "sg": 7.48
+            },
+            "time": "2025-12-11T05:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.41
+            },
+            "swellHeight": {
+                "sg": 0.61
+            },
+            "swellPeriod": {
+                "sg": 8.8
+            },
+            "time": "2025-12-11T06:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.34
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 8.78
+            },
+            "time": "2025-12-11T07:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.26
+            },
+            "swellHeight": {
+                "sg": 0.6
+            },
+            "swellPeriod": {
+                "sg": 8.77
+            },
+            "time": "2025-12-11T08:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.19
+            },
+            "swellHeight": {
+                "sg": 0.59
+            },
+            "swellPeriod": {
+                "sg": 8.75
+            },
+            "time": "2025-12-11T09:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 164.61
+            },
+            "swellHeight": {
+                "sg": 0.73
+            },
+            "swellPeriod": {
+                "sg": 7.34
+            },
+            "time": "2025-12-11T10:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 149.03
+            },
+            "swellHeight": {
+                "sg": 0.86
+            },
+            "swellPeriod": {
+                "sg": 5.94
+            },
+            "time": "2025-12-11T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 133.45
+            },
+            "swellHeight": {
+                "sg": 1.0
+            },
+            "swellPeriod": {
+                "sg": 4.53
+            },
+            "time": "2025-12-11T12:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 122.03
+            },
+            "swellHeight": {
+                "sg": 0.92
+            },
+            "swellPeriod": {
+                "sg": 4.55
+            },
+            "time": "2025-12-11T13:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 110.6
+            },
+            "swellHeight": {
+                "sg": 0.84
+            },
+            "swellPeriod": {
+                "sg": 4.58
+            },
+            "time": "2025-12-11T14:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 99.18
+            },
+            "swellHeight": {
+                "sg": 0.76
+            },
+            "swellPeriod": {
+                "sg": 4.6
+            },
+            "time": "2025-12-11T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 126.71
+            },
+            "swellHeight": {
+                "sg": 0.77
+            },
+            "swellPeriod": {
+                "sg": 5.15
+            },
+            "time": "2025-12-11T16:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 154.25
+            },
+            "swellHeight": {
+                "sg": 0.77
+            },
+            "swellPeriod": {
+                "sg": 5.69
+            },
+            "time": "2025-12-11T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 181.78
+            },
+            "swellHeight": {
+                "sg": 0.78
+            },
+            "swellPeriod": {
+                "sg": 6.24
+            },
+            "time": "2025-12-11T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 182.19
+            },
+            "swellHeight": {
+                "sg": 0.76
+            },
+            "swellPeriod": {
+                "sg": 6.27
+            },
+            "time": "2025-12-11T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 182.59
+            },
+            "swellHeight": {
+                "sg": 0.75
+            },
+            "swellPeriod": {
+                "sg": 6.31
+            },
+            "time": "2025-12-11T20:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 183.0
+            },
+            "swellHeight": {
+                "sg": 0.73
+            },
+            "swellPeriod": {
+                "sg": 6.34
+            },
+            "time": "2025-12-11T21:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 147.99
+            },
+            "swellHeight": {
+                "sg": 0.72
+            },
+            "swellPeriod": {
+                "sg": 7.39
             },
             "time": "2025-12-11T22:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.9
+                "sg": 112.98
             },
             "swellHeight": {
-                "sg": 1.09
+                "sg": 0.72
             },
             "swellPeriod": {
-                "sg": 9.36
+                "sg": 8.44
             },
             "time": "2025-12-11T23:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 80.86
+                "sg": 77.97
             },
             "swellHeight": {
-                "sg": 1.16
+                "sg": 0.71
             },
             "swellPeriod": {
-                "sg": 9.12
+                "sg": 9.49
             },
             "time": "2025-12-12T00:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.1
+                "sg": 78.33
             },
             "swellHeight": {
-                "sg": 1.18
+                "sg": 0.73
             },
             "swellPeriod": {
-                "sg": 9.12
+                "sg": 9.48
             },
             "time": "2025-12-12T01:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.33
+                "sg": 78.68
             },
             "swellHeight": {
-                "sg": 1.2
+                "sg": 0.76
             },
             "swellPeriod": {
-                "sg": 9.11
+                "sg": 9.47
             },
             "time": "2025-12-12T02:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 81.57
+                "sg": 79.04
             },
             "swellHeight": {
-                "sg": 1.22
+                "sg": 0.78
             },
             "swellPeriod": {
-                "sg": 9.11
+                "sg": 9.46
             },
             "time": "2025-12-12T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 82.43
+                "sg": 82.02
             },
             "swellHeight": {
-                "sg": 1.21
+                "sg": 0.89
             },
             "swellPeriod": {
-                "sg": 9.23
+                "sg": 7.97
             },
             "time": "2025-12-12T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 83.29
+                "sg": 85.01
             },
             "swellHeight": {
-                "sg": 1.2
+                "sg": 1.0
             },
             "swellPeriod": {
-                "sg": 9.34
+                "sg": 6.49
             },
             "time": "2025-12-12T05:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 84.15
+                "sg": 87.99
             },
             "swellHeight": {
-                "sg": 1.19
+                "sg": 1.11
             },
             "swellPeriod": {
-                "sg": 9.46
+                "sg": 5.0
             },
             "time": "2025-12-12T06:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 84.56
+                "sg": 88.36
             },
             "swellHeight": {
-                "sg": 1.18
+                "sg": 1.13
             },
             "swellPeriod": {
-                "sg": 9.47
+                "sg": 5.05
             },
             "time": "2025-12-12T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 84.97
+                "sg": 88.72
             },
             "swellHeight": {
-                "sg": 1.18
+                "sg": 1.14
             },
             "swellPeriod": {
-                "sg": 9.49
+                "sg": 5.11
             },
             "time": "2025-12-12T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 85.38
+                "sg": 89.09
             },
             "swellHeight": {
-                "sg": 1.17
+                "sg": 1.16
             },
             "swellPeriod": {
-                "sg": 9.5
+                "sg": 5.16
             },
             "time": "2025-12-12T09:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 85.8
-            },
-            "swellHeight": {
-                "sg": 1.16
-            },
-            "swellPeriod": {
-                "sg": 9.48
-            },
-            "time": "2025-12-12T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 86.23
-            },
-            "swellHeight": {
-                "sg": 1.16
-            },
-            "swellPeriod": {
-                "sg": 9.45
-            },
-            "time": "2025-12-12T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 86.65
+                "sg": 90.07
             },
             "swellHeight": {
                 "sg": 1.15
             },
             "swellPeriod": {
-                "sg": 9.43
+                "sg": 5.18
+            },
+            "time": "2025-12-12T10:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 91.06
+            },
+            "swellHeight": {
+                "sg": 1.13
+            },
+            "swellPeriod": {
+                "sg": 5.2
+            },
+            "time": "2025-12-12T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 92.04
+            },
+            "swellHeight": {
+                "sg": 1.12
+            },
+            "swellPeriod": {
+                "sg": 5.22
             },
             "time": "2025-12-12T12:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 87.81
+                "sg": 90.56
             },
             "swellHeight": {
-                "sg": 1.17
+                "sg": 1.15
             },
             "swellPeriod": {
-                "sg": 8.05
+                "sg": 5.24
             },
             "time": "2025-12-12T13:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 88.97
+                "sg": 89.07
             },
             "swellHeight": {
-                "sg": 1.2
+                "sg": 1.19
             },
             "swellPeriod": {
-                "sg": 6.68
+                "sg": 5.26
             },
             "time": "2025-12-12T14:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 90.13
+                "sg": 87.59
             },
             "swellHeight": {
                 "sg": 1.22
             },
             "swellPeriod": {
-                "sg": 5.3
+                "sg": 5.28
             },
             "time": "2025-12-12T15:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 88.69
+                "sg": 86.3
             },
             "swellHeight": {
-                "sg": 1.27
+                "sg": 1.24
             },
             "swellPeriod": {
-                "sg": 5.25
+                "sg": 5.29
             },
             "time": "2025-12-12T16:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 87.25
+                "sg": 85.02
             },
             "swellHeight": {
-                "sg": 1.33
+                "sg": 1.25
             },
             "swellPeriod": {
-                "sg": 5.2
+                "sg": 5.3
             },
             "time": "2025-12-12T17:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 85.81
+                "sg": 83.73
             },
             "swellHeight": {
-                "sg": 1.38
+                "sg": 1.27
             },
             "swellPeriod": {
-                "sg": 5.15
+                "sg": 5.31
             },
             "time": "2025-12-12T18:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 87.0
+                "sg": 81.25
             },
             "swellHeight": {
-                "sg": 1.41
+                "sg": 1.31
             },
             "swellPeriod": {
-                "sg": 5.19
+                "sg": 5.26
             },
             "time": "2025-12-12T19:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 88.19
+                "sg": 78.78
             },
             "swellHeight": {
-                "sg": 1.45
+                "sg": 1.34
             },
             "swellPeriod": {
                 "sg": 5.22
@@ -2270,154 +1982,154 @@
         },
         {
             "swellDirection": {
-                "sg": 89.38
+                "sg": 76.3
             },
             "swellHeight": {
-                "sg": 1.48
+                "sg": 1.38
             },
             "swellPeriod": {
-                "sg": 5.26
+                "sg": 5.17
             },
             "time": "2025-12-12T21:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 89.05
+                "sg": 75.61
             },
             "swellHeight": {
-                "sg": 1.48
+                "sg": 1.38
             },
             "swellPeriod": {
-                "sg": 5.26
+                "sg": 5.16
             },
             "time": "2025-12-12T22:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 88.72
+                "sg": 74.91
             },
             "swellHeight": {
-                "sg": 1.49
+                "sg": 1.37
             },
             "swellPeriod": {
-                "sg": 5.26
+                "sg": 5.15
             },
             "time": "2025-12-12T23:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 88.39
+                "sg": 74.22
             },
             "swellHeight": {
-                "sg": 1.49
+                "sg": 1.37
             },
             "swellPeriod": {
-                "sg": 5.26
+                "sg": 5.14
             },
             "time": "2025-12-13T00:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 89.07
+                "sg": 75.94
             },
             "swellHeight": {
-                "sg": 1.46
+                "sg": 1.34
             },
             "swellPeriod": {
-                "sg": 5.32
+                "sg": 5.24
             },
             "time": "2025-12-13T01:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 89.75
+                "sg": 77.65
             },
             "swellHeight": {
-                "sg": 1.43
+                "sg": 1.3
             },
             "swellPeriod": {
-                "sg": 5.38
+                "sg": 5.35
             },
             "time": "2025-12-13T02:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 90.43
+                "sg": 79.37
             },
             "swellHeight": {
-                "sg": 1.4
+                "sg": 1.27
             },
             "swellPeriod": {
-                "sg": 5.44
+                "sg": 5.45
             },
             "time": "2025-12-13T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 91.32
+                "sg": 81.84
             },
             "swellHeight": {
-                "sg": 1.4
+                "sg": 1.21
             },
             "swellPeriod": {
-                "sg": 5.54
+                "sg": 5.57
             },
             "time": "2025-12-13T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 92.21
+                "sg": 84.32
             },
             "swellHeight": {
-                "sg": 1.4
+                "sg": 1.14
             },
             "swellPeriod": {
-                "sg": 5.64
+                "sg": 5.69
             },
             "time": "2025-12-13T05:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 93.1
+                "sg": 86.79
             },
             "swellHeight": {
-                "sg": 1.4
+                "sg": 1.08
             },
             "swellPeriod": {
-                "sg": 5.74
+                "sg": 5.81
             },
             "time": "2025-12-13T06:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 92.09
+                "sg": 86.28
             },
             "swellHeight": {
-                "sg": 1.44
+                "sg": 1.12
             },
             "swellPeriod": {
-                "sg": 5.76
+                "sg": 5.81
             },
             "time": "2025-12-13T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 91.09
+                "sg": 85.77
             },
             "swellHeight": {
-                "sg": 1.49
+                "sg": 1.17
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.81
             },
             "time": "2025-12-13T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 90.08
+                "sg": 85.26
             },
             "swellHeight": {
-                "sg": 1.53
+                "sg": 1.21
             },
             "swellPeriod": {
                 "sg": 5.81
@@ -2426,465 +2138,753 @@
         },
         {
             "swellDirection": {
-                "sg": 88.39
-            },
-            "swellHeight": {
-                "sg": 1.56
-            },
-            "swellPeriod": {
-                "sg": 5.83
-            },
-            "time": "2025-12-13T10:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 86.7
-            },
-            "swellHeight": {
-                "sg": 1.58
-            },
-            "swellPeriod": {
-                "sg": 5.86
-            },
-            "time": "2025-12-13T11:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 85.01
-            },
-            "swellHeight": {
-                "sg": 1.61
-            },
-            "swellPeriod": {
-                "sg": 5.88
-            },
-            "time": "2025-12-13T12:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 82.62
-            },
-            "swellHeight": {
-                "sg": 1.62
-            },
-            "swellPeriod": {
-                "sg": 5.83
-            },
-            "time": "2025-12-13T13:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 80.23
-            },
-            "swellHeight": {
-                "sg": 1.63
-            },
-            "swellPeriod": {
-                "sg": 5.79
-            },
-            "time": "2025-12-13T14:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 77.84
-            },
-            "swellHeight": {
-                "sg": 1.64
-            },
-            "swellPeriod": {
-                "sg": 5.74
-            },
-            "time": "2025-12-13T15:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 75.9
-            },
-            "swellHeight": {
-                "sg": 1.63
-            },
-            "swellPeriod": {
-                "sg": 5.7
-            },
-            "time": "2025-12-13T16:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 73.95
-            },
-            "swellHeight": {
-                "sg": 1.63
-            },
-            "swellPeriod": {
-                "sg": 5.66
-            },
-            "time": "2025-12-13T17:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 72.01
-            },
-            "swellHeight": {
-                "sg": 1.62
-            },
-            "swellPeriod": {
-                "sg": 5.62
-            },
-            "time": "2025-12-13T18:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.94
-            },
-            "swellHeight": {
-                "sg": 1.58
-            },
-            "swellPeriod": {
-                "sg": 5.64
-            },
-            "time": "2025-12-13T19:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.87
-            },
-            "swellHeight": {
-                "sg": 1.54
-            },
-            "swellPeriod": {
-                "sg": 5.67
-            },
-            "time": "2025-12-13T20:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.8
-            },
-            "swellHeight": {
-                "sg": 1.5
-            },
-            "swellPeriod": {
-                "sg": 5.69
-            },
-            "time": "2025-12-13T21:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.64
-            },
-            "swellHeight": {
-                "sg": 1.44
-            },
-            "swellPeriod": {
-                "sg": 5.72
-            },
-            "time": "2025-12-13T22:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.48
-            },
-            "swellHeight": {
-                "sg": 1.39
-            },
-            "swellPeriod": {
-                "sg": 5.75
-            },
-            "time": "2025-12-13T23:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 71.32
-            },
-            "swellHeight": {
-                "sg": 1.33
-            },
-            "swellPeriod": {
-                "sg": 5.78
-            },
-            "time": "2025-12-14T00:00:00+00:00"
-        },
-        {
-            "swellDirection": {
-                "sg": 70.95
+                "sg": 83.53
             },
             "swellHeight": {
                 "sg": 1.26
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.86
             },
-            "time": "2025-12-14T01:00:00+00:00"
+            "time": "2025-12-13T10:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 70.57
+                "sg": 81.8
             },
             "swellHeight": {
-                "sg": 1.18
+                "sg": 1.32
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.91
             },
-            "time": "2025-12-14T02:00:00+00:00"
+            "time": "2025-12-13T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 80.07
+            },
+            "swellHeight": {
+                "sg": 1.37
+            },
+            "swellPeriod": {
+                "sg": 5.96
+            },
+            "time": "2025-12-13T12:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 75.13
+            },
+            "swellHeight": {
+                "sg": 1.53
+            },
+            "swellPeriod": {
+                "sg": 5.93
+            },
+            "time": "2025-12-13T13:00:00+00:00"
         },
         {
             "swellDirection": {
                 "sg": 70.2
             },
             "swellHeight": {
-                "sg": 1.11
+                "sg": 1.7
             },
             "swellPeriod": {
-                "sg": 5.8
+                "sg": 5.91
+            },
+            "time": "2025-12-13T14:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 65.26
+            },
+            "swellHeight": {
+                "sg": 1.86
+            },
+            "swellPeriod": {
+                "sg": 5.88
+            },
+            "time": "2025-12-13T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 65.07
+            },
+            "swellHeight": {
+                "sg": 1.82
+            },
+            "swellPeriod": {
+                "sg": 5.92
+            },
+            "time": "2025-12-13T16:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 64.89
+            },
+            "swellHeight": {
+                "sg": 1.78
+            },
+            "swellPeriod": {
+                "sg": 5.95
+            },
+            "time": "2025-12-13T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 64.7
+            },
+            "swellHeight": {
+                "sg": 1.74
+            },
+            "swellPeriod": {
+                "sg": 5.99
+            },
+            "time": "2025-12-13T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 64.75
+            },
+            "swellHeight": {
+                "sg": 1.69
+            },
+            "swellPeriod": {
+                "sg": 6.02
+            },
+            "time": "2025-12-13T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 64.81
+            },
+            "swellHeight": {
+                "sg": 1.63
+            },
+            "swellPeriod": {
+                "sg": 6.04
+            },
+            "time": "2025-12-13T20:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 64.86
+            },
+            "swellHeight": {
+                "sg": 1.58
+            },
+            "swellPeriod": {
+                "sg": 6.07
+            },
+            "time": "2025-12-13T21:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 62.2
+            },
+            "swellHeight": {
+                "sg": 1.48
+            },
+            "swellPeriod": {
+                "sg": 5.97
+            },
+            "time": "2025-12-13T22:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.54
+            },
+            "swellHeight": {
+                "sg": 1.38
+            },
+            "swellPeriod": {
+                "sg": 5.87
+            },
+            "time": "2025-12-13T23:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 56.88
+            },
+            "swellHeight": {
+                "sg": 1.28
+            },
+            "swellPeriod": {
+                "sg": 5.77
+            },
+            "time": "2025-12-14T00:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 58.08
+            },
+            "swellHeight": {
+                "sg": 1.28
+            },
+            "swellPeriod": {
+                "sg": 5.76
+            },
+            "time": "2025-12-14T01:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 59.28
+            },
+            "swellHeight": {
+                "sg": 1.29
+            },
+            "swellPeriod": {
+                "sg": 5.74
+            },
+            "time": "2025-12-14T02:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 60.48
+            },
+            "swellHeight": {
+                "sg": 1.29
+            },
+            "swellPeriod": {
+                "sg": 5.73
             },
             "time": "2025-12-14T03:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 70.75
+                "sg": 58.96
             },
             "swellHeight": {
-                "sg": 1.06
+                "sg": 1.23
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.73
             },
             "time": "2025-12-14T04:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 71.29
+                "sg": 57.45
             },
             "swellHeight": {
-                "sg": 1.02
+                "sg": 1.16
             },
             "swellPeriod": {
-                "sg": 5.79
+                "sg": 5.73
             },
             "time": "2025-12-14T05:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 71.84
+                "sg": 55.93
             },
             "swellHeight": {
-                "sg": 0.97
+                "sg": 1.1
             },
             "swellPeriod": {
-                "sg": 5.78
+                "sg": 5.73
             },
             "time": "2025-12-14T06:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 73.8
+                "sg": 57.67
             },
             "swellHeight": {
-                "sg": 0.92
+                "sg": 1.02
             },
             "swellPeriod": {
-                "sg": 5.81
+                "sg": 5.82
             },
             "time": "2025-12-14T07:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 75.77
+                "sg": 59.42
             },
             "swellHeight": {
-                "sg": 0.86
+                "sg": 0.95
             },
             "swellPeriod": {
-                "sg": 5.83
+                "sg": 5.9
             },
             "time": "2025-12-14T08:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 77.73
+                "sg": 61.16
             },
             "swellHeight": {
-                "sg": 0.81
+                "sg": 0.87
             },
             "swellPeriod": {
-                "sg": 5.86
+                "sg": 5.99
             },
             "time": "2025-12-14T09:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 79.33
+                "sg": 61.22
             },
             "swellHeight": {
-                "sg": 0.78
+                "sg": 0.84
             },
             "swellPeriod": {
-                "sg": 5.85
+                "sg": 6.02
             },
             "time": "2025-12-14T10:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 80.94
+                "sg": 61.27
             },
             "swellHeight": {
-                "sg": 0.74
+                "sg": 0.8
             },
             "swellPeriod": {
-                "sg": 5.85
+                "sg": 6.04
             },
             "time": "2025-12-14T11:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 82.54
+                "sg": 61.33
             },
             "swellHeight": {
-                "sg": 0.71
+                "sg": 0.77
             },
             "swellPeriod": {
-                "sg": 5.84
+                "sg": 6.07
             },
             "time": "2025-12-14T12:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 114.12
+                "sg": 68.06
             },
             "swellHeight": {
-                "sg": 0.82
+                "sg": 0.72
             },
             "swellPeriod": {
-                "sg": 5.56
+                "sg": 6.29
             },
             "time": "2025-12-14T13:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 145.7
+                "sg": 74.78
             },
             "swellHeight": {
-                "sg": 0.92
+                "sg": 0.67
             },
             "swellPeriod": {
-                "sg": 5.29
+                "sg": 6.52
             },
             "time": "2025-12-14T14:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 177.28
+                "sg": 81.51
             },
             "swellHeight": {
-                "sg": 1.03
+                "sg": 0.62
             },
             "swellPeriod": {
-                "sg": 5.01
+                "sg": 6.74
             },
             "time": "2025-12-14T15:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 178.06
+                "sg": 108.5
             },
             "swellHeight": {
-                "sg": 1.01
+                "sg": 0.58
             },
             "swellPeriod": {
-                "sg": 5.06
+                "sg": 7.26
             },
             "time": "2025-12-14T16:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 178.83
+                "sg": 135.48
             },
             "swellHeight": {
-                "sg": 0.99
+                "sg": 0.55
             },
             "swellPeriod": {
-                "sg": 5.12
+                "sg": 7.79
             },
             "time": "2025-12-14T17:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 179.61
+                "sg": 162.47
             },
             "swellHeight": {
-                "sg": 0.97
+                "sg": 0.51
             },
             "swellPeriod": {
-                "sg": 5.17
+                "sg": 8.31
             },
             "time": "2025-12-14T18:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 180.2
+                "sg": 166.11
             },
             "swellHeight": {
-                "sg": 0.93
+                "sg": 0.91
             },
             "swellPeriod": {
-                "sg": 5.17
+                "sg": 7.73
             },
             "time": "2025-12-14T19:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 180.79
+                "sg": 169.74
             },
             "swellHeight": {
-                "sg": 0.9
+                "sg": 1.3
             },
             "swellPeriod": {
-                "sg": 5.16
+                "sg": 7.15
             },
             "time": "2025-12-14T20:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 181.38
+                "sg": 173.38
             },
             "swellHeight": {
-                "sg": 0.86
+                "sg": 1.7
             },
             "swellPeriod": {
-                "sg": 5.16
+                "sg": 6.57
             },
             "time": "2025-12-14T21:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 181.36
+                "sg": 174.44
             },
             "swellHeight": {
-                "sg": 0.82
+                "sg": 1.73
             },
             "swellPeriod": {
-                "sg": 5.12
+                "sg": 6.42
             },
             "time": "2025-12-14T22:00:00+00:00"
         },
         {
             "swellDirection": {
-                "sg": 181.35
+                "sg": 175.49
             },
             "swellHeight": {
-                "sg": 0.79
+                "sg": 1.77
             },
             "swellPeriod": {
-                "sg": 5.07
+                "sg": 6.28
             },
             "time": "2025-12-14T23:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.55
+            },
+            "swellHeight": {
+                "sg": 1.8
+            },
+            "swellPeriod": {
+                "sg": 6.13
+            },
+            "time": "2025-12-15T00:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 177.2
+            },
+            "swellHeight": {
+                "sg": 1.73
+            },
+            "swellPeriod": {
+                "sg": 6.19
+            },
+            "time": "2025-12-15T01:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 177.84
+            },
+            "swellHeight": {
+                "sg": 1.67
+            },
+            "swellPeriod": {
+                "sg": 6.24
+            },
+            "time": "2025-12-15T02:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 178.49
+            },
+            "swellHeight": {
+                "sg": 1.6
+            },
+            "swellPeriod": {
+                "sg": 6.3
+            },
+            "time": "2025-12-15T03:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.72
+            },
+            "swellHeight": {
+                "sg": 1.57
+            },
+            "swellPeriod": {
+                "sg": 6.31
+            },
+            "time": "2025-12-15T04:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.94
+            },
+            "swellHeight": {
+                "sg": 1.54
+            },
+            "swellPeriod": {
+                "sg": 6.33
+            },
+            "time": "2025-12-15T05:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 182.17
+            },
+            "swellHeight": {
+                "sg": 1.51
+            },
+            "swellPeriod": {
+                "sg": 6.34
+            },
+            "time": "2025-12-15T06:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 180.16
+            },
+            "swellHeight": {
+                "sg": 1.56
+            },
+            "swellPeriod": {
+                "sg": 6.28
+            },
+            "time": "2025-12-15T07:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 178.15
+            },
+            "swellHeight": {
+                "sg": 1.61
+            },
+            "swellPeriod": {
+                "sg": 6.22
+            },
+            "time": "2025-12-15T08:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.14
+            },
+            "swellHeight": {
+                "sg": 1.66
+            },
+            "swellPeriod": {
+                "sg": 6.16
+            },
+            "time": "2025-12-15T09:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.2
+            },
+            "swellHeight": {
+                "sg": 1.69
+            },
+            "swellPeriod": {
+                "sg": 6.2
+            },
+            "time": "2025-12-15T10:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.25
+            },
+            "swellHeight": {
+                "sg": 1.72
+            },
+            "swellPeriod": {
+                "sg": 6.25
+            },
+            "time": "2025-12-15T11:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.31
+            },
+            "swellHeight": {
+                "sg": 1.75
+            },
+            "swellPeriod": {
+                "sg": 6.29
+            },
+            "time": "2025-12-15T12:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 176.98
+            },
+            "swellHeight": {
+                "sg": 1.75
+            },
+            "swellPeriod": {
+                "sg": 6.34
+            },
+            "time": "2025-12-15T13:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 177.64
+            },
+            "swellHeight": {
+                "sg": 1.76
+            },
+            "swellPeriod": {
+                "sg": 6.39
+            },
+            "time": "2025-12-15T14:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 178.31
+            },
+            "swellHeight": {
+                "sg": 1.76
+            },
+            "swellPeriod": {
+                "sg": 6.44
+            },
+            "time": "2025-12-15T15:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 178.63
+            },
+            "swellHeight": {
+                "sg": 1.74
+            },
+            "swellPeriod": {
+                "sg": 6.44
+            },
+            "time": "2025-12-15T16:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 178.96
+            },
+            "swellHeight": {
+                "sg": 1.71
+            },
+            "swellPeriod": {
+                "sg": 6.44
+            },
+            "time": "2025-12-15T17:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.28
+            },
+            "swellHeight": {
+                "sg": 1.69
+            },
+            "swellPeriod": {
+                "sg": 6.44
+            },
+            "time": "2025-12-15T18:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.41
+            },
+            "swellHeight": {
+                "sg": 1.65
+            },
+            "swellPeriod": {
+                "sg": 6.42
+            },
+            "time": "2025-12-15T19:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.54
+            },
+            "swellHeight": {
+                "sg": 1.62
+            },
+            "swellPeriod": {
+                "sg": 6.39
+            },
+            "time": "2025-12-15T20:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.67
+            },
+            "swellHeight": {
+                "sg": 1.58
+            },
+            "swellPeriod": {
+                "sg": 6.37
+            },
+            "time": "2025-12-15T21:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.59
+            },
+            "swellHeight": {
+                "sg": 1.54
+            },
+            "swellPeriod": {
+                "sg": 6.33
+            },
+            "time": "2025-12-15T22:00:00+00:00"
+        },
+        {
+            "swellDirection": {
+                "sg": 179.52
+            },
+            "swellHeight": {
+                "sg": 1.51
+            },
+            "swellPeriod": {
+                "sg": 6.28
+            },
+            "time": "2025-12-15T23:00:00+00:00"
         }
     ],
     "meta": {
         "cost": 1,
         "dailyQuota": 10,
-        "end": "2025-12-14 23:00",
+        "end": "2025-12-15 23:00",
         "lat": -33.8908,
         "lng": 151.2773,
         "params": [
@@ -2896,7 +2896,7 @@
         "source": [
             "sg"
         ],
-        "start": "2025-12-05 00:00"
+        "start": "2025-12-06 00:00"
     },
-    "last_updated": "2025-12-06 06:17:31"
+    "last_updated": "2025-12-07 06:16:17"
 }
