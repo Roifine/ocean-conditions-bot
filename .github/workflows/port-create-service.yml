@@ -6,7 +6,7 @@ on:
       service_name:
         required: true
         description: The name of the new service
-        type: strin
+        type: string
       description:
         required: false
         description: Description of the service
