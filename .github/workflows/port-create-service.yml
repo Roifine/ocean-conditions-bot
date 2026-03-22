@@ -20,7 +20,7 @@ jobs:
   scaffold-service:
     runs-on: ubuntu-latest
     env:
-      ORG_NAME: <Your ORG name>
+      ORG_NAME: Roifine
 
     steps:
       - uses: actions/checkout@v4
