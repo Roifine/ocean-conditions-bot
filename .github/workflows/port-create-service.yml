@@ -51,7 +51,7 @@ jobs:
           cookiecutterTemplate: https://github.com/lacion/cookiecutter-golang
           blueprintIdentifier: "githubRepository"
           organizationName: ${{ env.ORG_NAME }}
-          createPortEntity: false
+          createPortEntity: true
 
 
       - name: Create Service in Port with Repository Relation
